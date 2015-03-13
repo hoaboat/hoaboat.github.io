@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Looks like columns, but isn't</title>
+		
+		<meta charset="utf-8" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		
+		<style>
+			body {
+				position: relative;
+				margin: 0;
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+				color: #000;
+				-webkit-transition: color 1s ease-out;
+				-moz-transition: color 1s ease-out;
+				-o-transition: color 1s ease-out;
+				transition: color 1s ease-out;
+			}
+
+			/* For the colored columns */
+			.content::before,
+			.content::after {
+				content: "";
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				z-index: -1;
+				-webkit-transition: background 1s ease-out;
+				-moz-transition: background 1s ease-out;
+				-o-transition: background 1s ease-out;
+				transition: background 1s ease-out;
+			}
+
+			/* Left colored column */
+			.content::before {
+				right: 50%;
+				left: 0;
+				background: #f4f4f4;
+			}
+
+			/* Right colored column */
+			.content::after {
+				right: 0;
+				left: 50%;
+				background: #eaeaea;
+			}
+
+			.content {
+				padding: 15px;
+			}
+
+			/* To clear float */
+			.endpoint::after {
+				content: "";
+				display: block;
+				clear: both;
+			}
+
+			.requestResponse,
+			.examples {
+				float: left;
+				width: 50%;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				-ms-box-sizing: border-box;
+				-o-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+
+			.requestResponse {
+				padding: 15px 15px 15px 0;
+			}
+
+			.examples {
+				padding: 15px 0 15px 15px;
+			}
+
+		</style>
+	</head>
+	
+	<body>
+		<div class="content">
+			<div class="endpoint">
+				<h2>Meow catnip fluffy</h2>
+				<div class="requestResponse">This paragraph is aligned with the paragraph on the right. -----> </div>
+				<div class="examples"><----- This paragraph is aligned with the paragraph on the left.</div>
+			</div>
+			<div class="endpoint">
+				<h2>Eat jump on the table sleep</h2>
+				<div class="requestResponse">Sniff rip the couch attack your ankles lay down in your way, fluffy fur
+					fluffy fur eat the grass litter box climb the curtains tail flick. I don't like that food tail
+					flick hiss chase the red dot, chuf eat knock over the lamp purr leap climb the curtains.</div>
+				<div class="examples">Fluffy fur litter box stuck in a tree bat, claw jump hiss I don't like that food
+					leap biting.</div>
+			</div>
+			<div class="endpoint">
+				<h2>Shed everywhere hiss attack</h2>
+				<div class="requestResponse">Claw chuf leap stuck in a tree, jump tail flick shed everywhere zzz chase
+					the red dot shed everywhere sniff sniff.</div>
+				<div class="examples">Feed me sniff purr lick, meow lay down in your way shed everywhere chuf zzz
+					jump sniff sleep on your keyboard. Claw bat toss the mousie sniff, judging you rip the couch
+					feed me stretching leap chase the red dot tail flick chase the red dot. Eat eat the grass run
+					sleep on your keyboard feed me, purr puking attack your ankles run I don't like that food.</div>
+			</div>
+			<div class="endpoint">
+				<h2>Run biting rip the couch</h2>
+				<div class="requestResponse">Shed everywhere hiss attack your ankles attack your ankles, zzz catnip
+					feed me attack leap judging you run. Catnip give me fish stretching claw, sniff sunbathe
+					scratched feed me eat the grass meow. Run biting rip the couch sniff run chuf, kittens tail
+					flick hiss judging you</div>
+				<div class="examples">Shed everywhere hiss attack your ankles attack your ankles, zzz catnip
+					feed me attack leap judging you run. Catnip give me fish stretching claw, sniff sunbathe
+					scratched feed me eat the grass meow. Run biting rip the couch</div>
+			</div>
+		</div>
+	</body>
+</html>
