@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Butterfly</title>
+		
+		<meta charset="utf-8" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		
+		<style>
+
+			/* Container */
+			.fun {
+				position: absolute;
+				top: -161px;
+				left: -280px;
+				margin: 0;
+				height: 400px;
+				width: 800px;
+				color: transparent;
+				transform: rotate(-90deg);
+			}
+
+			/* Left antennae ball */
+			.fun::before {
+				content: '';
+				position: absolute;
+				top: 183px;
+				left: 326px;
+				width: 8px;
+				height: 8px;
+				border-radius: 8px;
+				background: black;
+			}
+
+			/* Right antennae ball */
+			.fun::after {
+				content: '';
+				position: absolute;
+				top: 224px;
+				left: 326px;
+				width: 8px;
+				height: 8px;
+				border-radius: 8px;
+				background: black;
+			}
+
+			/* Body and wing */
+			.rainbow {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background:
+				-webkit-radial-gradient(220px 205px, ellipse farthest-corner, black 10%, transparent 10%),
+				-webkit-radial-gradient(256px 178px, circle, orangered 0, purple 5px, blue 20px, green 25px, yellow 30px, orange 35px, red 45px, black 50px, transparent 50px, transparent 100px),
+				-webkit-radial-gradient(256px 235px, circle, orangered 0, purple 5px, blue 20px, green 25px, yellow 30px, orange 35px, red 45px, black 50px, transparent 50px, transparent 100px),
+				-webkit-radial-gradient(184px 249px, circle, orangered 0, purple 5px, blue 20px, green 25px, yellow 30px, orange 35px, red 45px, black 50px, transparent 50px, transparent 100px),
+				-webkit-radial-gradient(184px 159px, circle, orangered 0, purple 5px, blue 20px, green 25px, yellow 30px, orange 35px, red 45px, black 50px, transparent 50px, transparent 100px);
+			}
+
+			/* Left antennae */
+			.rainbow::before {
+				content: '';
+				position: absolute;
+				top: 180px;
+				left: 298px;
+				width: 25px;
+				height: 25px;
+				border-width: 2px;
+				border-radius: 0 0 25px 0;
+				border-color: transparent black black transparent;
+				border-style: solid;
+				transform: rotate(15deg);
+			}
+
+			/* Right antennae */
+			.rainbow::after {
+				content: '';
+				position: absolute;
+				top: 205px;
+				left: 296px;
+				width: 25px;
+				height: 25px;
+				border-width: 2px;
+				border-radius: 25px 0 0 0;
+				border-color: black transparent transparent black;
+				border-style: solid;
+				transform: rotate(68deg);
+			}
+
+			/* Left eye */
+			.butterfly::before {
+				content: '';
+				position: absolute;
+				top: 199px;
+				left: 279px;
+				width: 3px;
+				height: 3px;
+				border-radius: 3px;
+				background: white;
+			}
+
+			/* Right eye */
+			.butterfly::after {
+				content: '';
+				position: absolute;
+				top: 212px;
+				left: 279px;
+				width: 3px;
+				height: 3px;
+				border-radius: 3px;
+				background: white;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<h1>Butterfly</h1>
+
+		<p class="fun">I like <span class="rainbow">rainbow</span> and <span class="butterfly">butterflies</span>.</p>
+	</body>
+</html>

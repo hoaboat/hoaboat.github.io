@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Border image</title>
+		
+		<meta charset="utf-8" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		
+		<style>
+			.container {
+				height: 237px;
+				border-width: 0 46px 0 44px;
+				border-image: url("images/fence2.jpg") 0 46 0 44 fill repeat;
+			}
+
+			.container2 {
+				height: 237px;
+				background: url("images/fence2.jpg");
+			}
+
+			img, div {
+				margin-bottom: 50px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<h1>Border image</h1>
+
+		<h2>Original image</h2>
+		<img src="images/fence2.jpg"/>
+
+		<h2>As background, repeated</h2>
+		<div class="container2"></div>
+
+		<h2>As border image</h2>
+		<div class="container"></div>
+
+
+
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>iframe content</title>
+		
+		<meta charset="utf-8" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<style>
+			body {
+				font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			}
+		</style>
+		<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+	</head>
+	
+	<body>
+		<h1>iframe content</h1>
+
+		<p><a href="#something" class="keepMeLoginAbout" id="keepMeLoginAbout">Stay logged in</a></p>
+
+		<section class="keepMeLoginTerms"><h2>Stay logged in</h2><p>We don't recommend choosing this option on a shared device.</p><p>You can skip login when you pay with and use PayPal on this device and browser. We'll still ask you to log in to access your account info and activity.</p><p>You can always turn this off in your PayPal account. Just log in at paypal.com and go to your Profile, then Security.</p><button id="keepMeLoginAboutBtn" class="keepMeLoginAboutBtn" type="button">Close about stay logged in</button></section>
+
+		<script>
+			$('#keepMeLoginAbout').on('click', function(event) {
+				event.preventDefault();
+
+				var info = $('.keepMeLoginTerms').clone(),
+						$$ = window.top.window.$;
+
+				$$('#content').append('<div id="mask" style="position:fixed; top:0; right:0; bottom:0; left:0; background:rgba(51, 51, 51, 0.9); z-index:10;"><div id="info" style="position:fixed; top:33%; right:33%; bottom:33%; left:33%; background:white; padding:15px;"></div></div>');
+				$$('#info').append(info);
+				$$('#keepMeLoginAboutBtn').css('background', 'url(https://www.paypalobjects.com/webstatic/mktg/2014design/close_default.png) no-repeat');
+				$$('#keepMeLoginAboutBtn').css('position', 'absolute');
+				$$('#keepMeLoginAboutBtn').css('top', '10px');
+				$$('#keepMeLoginAboutBtn').css('right', '10px');
+				$$('#keepMeLoginAboutBtn').css('width', '25px');
+				$$('#keepMeLoginAboutBtn').css('height', '25px');
+				$$('#keepMeLoginAboutBtn').css('border', 'none');
+				$$('#keepMeLoginAboutBtn').css('text-indent', '-9999em');
+				$$('#keepMeLoginAboutBtn').css('direction', 'ltr');
+
+				$$('.keepMeLoginAboutBtn').on('click', function(){
+					$$('#content').find('#mask').remove();
+				});
+			});
+		</script>
+	</body>
+</html>

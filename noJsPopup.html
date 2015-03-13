@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>No JS popup</title>
+
+	<meta charset="utf-8" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+
+	<style>
+		.hairballs {
+			position: relative;
+		}
+
+		.aboutHairballs {
+			display: none;
+			padding: 10px;
+		}
+
+		.whatHairballs:focus + .aboutHairballs {
+			display: block;
+			position: absolute;
+			top: 8%;
+			right: 8%;
+			bottom: 0;
+			left: 8%;
+			border-radius: 6px;
+			background: #4b9949;
+			color: #fff;
+		}
+	</style>
+</head>
+
+<body>
+<h1>No JS popup</h1>
+
+<div class="hairballs">
+	<p>Sniff claw lick meow meow chase the red dot, leap chase the red dot kittens eat the grass. Hairball sniff purr run, judging you bat chase the red dot kittens tail flick give me fish attack. Sleep in the sink zzz stuck in a tree knock over the lamp sleep in the sink attack, attack sunbathe eat the grass claw leap rip the couch.</p>
+	<input type="checkbox" id="wantHairballs" />
+	<label for="wantHairballs">Want hairballs?</label>
+	<a href="#aboutHairballs" class="whatHairballs">What are hairballs?</a>
+	<div class="aboutHairballs" id="aboutHairballs">Bat jump lay down in your way kittens feed me, sunbathe judging you scratched feed me attack attack your ankles sleep on your face. Leap sleep in the sink chase the red dot meow litter box sniff, sleep in</div>
+</div>
+
+</body>
+</html>

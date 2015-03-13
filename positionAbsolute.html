@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Position absolute</title>
+		
+		<meta charset="utf-8" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		
+		<style>
+			.container {
+				box-shadow: 2px 0px 2px 2px;
+			}
+
+			.container2 {
+				position: relative;
+
+			}
+
+			.container2::after {
+				content: "";
+				width: 5px;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: -5px;
+				background-image: -webkit-linear-gradient(left, black, transparent);
+				background-image: -moz-linear-gradient(left, black, transparent);
+				background-image: -o-linear-gradient(left, black, transparent);
+				background-image: linear-gradient(left, black, transparent);
+			}
+
+			.container,
+			.container2 {
+				margin: 50px;
+				width: 200px;
+				height: 100px;
+				background: #eae2e4;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<h1>Position absolute</h1>
+
+		<h2>Using box-shadow</h2>
+		<div class="container"></div>
+
+		<h2>Using position: absolute;</h2>
+		<div class="container2"></div>
+
+	</body>
+</html>

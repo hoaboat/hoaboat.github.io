@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>PayPal Logo</title>
+		<meta charset="utf-8"/>
+		<meta name="keywords" content="PayPal Logo"/>
+		<meta name="description" content="PayPal logo created with CSS"/>
+
+		<style>
+			.paypalLogo {
+				position: relative;
+				-webkit-transform: skewx(-10deg);
+				-moz-transform: skewx(-10deg);
+				transform: skewx(-10deg);
+			}
+
+			.title, .tagline {
+				color: rgba(0, 0, 0, 0);
+			}
+
+			.title {
+				position: absolute;
+				top: 17px;
+				left: 28px;
+				margin-top: 0;
+				width: 44px;
+				height: 37px;
+				background-color: rgba(84, 155, 221, 1);
+				border-radius: 3px 15px 20px 0;
+			}
+
+			.title:before {
+				content: "";
+				position: absolute;
+				top: 37px;
+				left: 18px;
+				width: 5px;
+				height: 5px;
+				background-image: -webkit-radial-gradient(5px 5px, ellipse, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 5px, rgba(84, 155, 221, 1) 5px, rgba(84, 155, 221, 1) 100px);
+				background-image: -moz-radial-gradient(5px 5px, ellipse, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 5px, rgba(84, 155, 221, 1) 5px, rgba(84, 155, 221, 1) 100px);
+				background-image: -ms-radial-gradient(5px 5px, ellipse, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 25
+				5, 0) 5px, rgba(84, 155, 221, 1) 5px, rgba(84, 155, 221, 1) 100px);
+				background-image: -o-radial-gradient(5px 5px, ellipse, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 25
+				5, 0) 5px, rgba(84, 155, 221, 1) 5px, rgba(84, 155, 221, 1) 100px);
+				background-image: radial-gradient(5px 5px, ellipse, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 5px, rgba(84, 155, 221, 1) 5px, rgba(84, 155, 221, 1) 100px);
+			}
+
+			.title:after {
+				content: "";
+				position: absolute;
+				top: 37px;
+				left: 0;
+				width: 18px;
+				height: 23px;
+				background-color: rgba(84, 155, 221, 1);
+				border-radius: 0 0 2px 3px;
+			}
+
+			.tagline {
+				position: absolute;
+				top: 0;
+				left: 10px;
+				margin-top: 0;
+				width: 50px;
+				height: 40px;
+				background-color: rgba(41, 47, 101, 0.9);
+				border-radius: 3px 15px 20px 0;
+			}
+
+			.tagline:before {
+				content: "";
+				position: absolute;
+				top: 40px;
+				left: 18px;
+				width: 5px;
+				height: 5px;
+				background-color: transparent;
+				background-image: -webkit-radial-gradient(5px 5px, circle, rgba(84, 155, 221, 1) 0%, rgba(84, 155, 221, 1) 5px, rgba(41, 47, 101, 0.9) 5px, rgba(41, 47, 101, 0.9) 100px);
+				background-image: -moz-radial-gradient(5px 5px, circle, rgba(84, 155, 221, 1) 0%, rgba(84, 155, 221, 1) 5px, rgba(41, 47, 101, 0.9) 5px, rgba(41, 47, 101, 0.9) 100px);
+				background-image: -ms-radial-gradient(5px 5px, circle, rgba(84, 155, 221, 1) 0%, rgba(84, 155, 221, 1)
+				5px, rgba(41, 47, 101, 0.9) 5px, rgba(41, 47, 101, 0.9) 100px);
+				background-image: -o-radial-gradient(5px 5px, circle, rgba(84, 155, 221, 1) 0%, rgba(84, 155, 221, 1)
+				5px, rgba(41, 47, 101, 0.9) 5px, rgba(41, 47, 101, 0.9) 100px);
+				background-image: radial-gradient(5px 5px, circle, rgba(84, 155, 221, 1) 0%, rgba(84, 155, 221, 1) 5px, rgba(41, 47, 101, 0.9) 5px, rgba(41, 47, 101, 0.9) 100px);
+			}
+
+			.tagline:after {
+				content: "";
+				position: absolute;
+				top: 40px;
+				left: 0;
+				width: 18px;
+				height: 28px;
+				background-color: rgba(41, 47, 101, 0.9);
+				border-radius: 0 0 0 3px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<h1>PayPal logo using only CSS</h1>
+
+		<article class="paypalLogo">
+			<p class="title">PayPal</p>
+			<p class="tagline">PayPal is the faster, safer way to pay and get paid.</p>
+		</article>
+	</body>
+</html>
