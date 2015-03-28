@@ -188,8 +188,8 @@
 	</article>
 
 	<script>
-		$('.poyntLogo').on('click', function() {
-			$('.poyntLogoTagline').toggleClass('spin');
+		$('.poyntLogo').on('click', function(event) {
+			$(event.target).find('.poyntLogoTagline').toggleClass('spin');
 		});
 	</script>
 
