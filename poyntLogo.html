@@ -189,7 +189,14 @@
 
 	<script>
 		$('.poyntLogo').on('click', function(event) {
-			$(event.target).find('.poyntLogoTagline').toggleClass('spin');
+			var $target = $(event.target);
+			if ($target.hasClass('poyntLogoTitle')) {
+				$target.siblings('.poyntLogoTagline').toggleClass('spin');
+			} else if ($target.hasClass('poyntLogoTagline')) {
+				$target.toggleClass('spin');
+			} else if ($target.hasClass('poyntLogo')) {
+				$target.find('.poyntLogoTagline').toggleClass('spin');
+			}
 		});
 	</script>
 
