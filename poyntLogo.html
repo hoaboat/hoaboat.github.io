@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>Poynt Logo</title>
+	<meta charset="utf-8"/>
+	<meta name="keywords" content="Poynt Logo"/>
+	<meta name="description" content="Poynt logo created with CSS"/>
+	<meta name="author" content="Hoa Doan Klein" />
+
+	<style>
+
+		body {
+			padding: 0;
+			margin: 0;
+			background: #ccc;
+		}
+
+		.poyntLogo {
+			position: relative;
+			display: table;
+			height: 100px;
+			font-family: "futura-pt", sans-serif;
+			color: #375270;
+		}
+
+		/* Outermost ring */
+		.poyntLogoTagline {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100px;
+			height: 100px;
+			border-radius: 100px;
+			color: rgba(0, 0, 0, 0);
+			background: #627793;
+		}
+
+		/* White ring */
+		.poyntLogoTagline::before {
+			content: "";
+			position: absolute;
+			top: 14px;
+			left: 14px;
+			z-index: 1;
+			background: #fff;
+			width: 72px;
+			height: 72px;
+			border-radius: 72px;
+		}
+
+		/* Center, dark blue circle */
+		.poyntLogoTagline::after {
+			content: "";
+			position: absolute;
+			top: 33px;
+			left: 33px;
+			z-index: 2;
+			width: 34px;
+			height: 34px;
+			border-radius: 34px;
+			background: #375270;
+		}
+
+		.poyntLogoTitle {
+			display: table-cell;
+			vertical-align: middle;
+			padding-left: 120px;
+			font-size: 71px;
+			letter-spacing: 5px;
+		}
+
+		/* Triangular point */
+		.poyntLogoTitle:before {
+			content: "";
+			position: absolute;
+			top: 10px;
+			left: 70px;
+			z-index: 3;
+			border-width: 10px 0 10px 20px;;
+			border-color: transparent transparent transparent #fff;
+			border-style: solid;
+			-webkit-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+		}
+
+		.poyntLogoTitle,
+		.poyntLogoTagline {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		.origLogo {
+			position: absolute;
+			top: 0;
+			z-index: 4;
+			opacity: 0.5;
+		}
+
+	</style>
+	<script src="//use.typekit.net/jeq0lgz.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body>
+
+
+<article class="poyntLogo">
+	<p class="poyntLogoTitle">POYNT</p>
+	<p class="poyntLogoTagline">The world’s first smart payment terminal</p>
+</article>
+
+<img src="images/poyntLogo100.png" class="origLogo" />
+
+<h1>Poynt logo using only CSS</h1>
+
+
+</body>
+</html>
