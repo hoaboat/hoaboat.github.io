@@ -18,12 +18,12 @@
 			color: #fff;
 		}
 
+		/* Animation on hover */
 		.poyntLogo:hover > .poyntLogoTagline {
-			-webkit-transform: rotate(360deg);
-			-moz-transform: rotate(360deg);
-			-ms-transform: rotate(360deg);
-			-o-transform: rotate(360deg);
-			transform: rotate(360deg);
+			-webkit-animation: point 4s linear infinite; /* Safari 4+ */
+			-moz-animation: point 4s linear infinite; /* Fx 5+ */
+			-o-animation: point 4s linear infinite; /* Opera 12+ */
+			animation: point 4s linear infinite; /* IE 10+, Fx 29+ */
 		}
 
 		/* White ring */
@@ -112,7 +112,56 @@
 			margin-top: 50px;
 		}
 
+		/* Animation on click */
+		.spin {
+			-webkit-animation: point 4s linear infinite; /* Safari 4+ */
+			-moz-animation: point 4s linear infinite; /* Fx 5+ */
+			-o-animation: point 4s linear infinite; /* Opera 12+ */
+			animation: point 4s linear infinite; /* IE 10+, Fx 29+ */
+		}
+
+		@-webkit-keyframes point {
+			50% {
+				-webkit-transform: rotate(180deg);
+			}
+
+			100% {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+
+		@-moz-keyframes point {
+			50% {
+				-moz-transform: rotate(180deg);
+			}
+
+			100% {
+				-moz-transform: rotate(360deg);
+			}
+		}
+
+		@-o-keyframes point {
+			50% {
+				-o-transform: rotate(180deg);
+			}
+
+			100% {
+				-o-transform: rotate(360deg);
+			}
+		}
+
+		@keyframes point {
+			50% {
+				transform: rotate(180deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
 	</style>
+	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="//use.typekit.net/jeq0lgz.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
 </head>
@@ -137,6 +186,12 @@
 		<p class="poyntLogoTitle">POYNT</p>
 		<p class="poyntLogoTagline">The world’s first smart payment terminal</p>
 	</article>
+
+	<script>
+		$('.poyntLogo').on('click', function() {
+			$('.poyntLogoTagline').toggleClass('spin');
+		});
+	</script>
 
 </body>
 </html>
