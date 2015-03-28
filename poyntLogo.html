@@ -14,7 +14,7 @@
 			display: table;
 			height: 100px;
 			font-family: "futura-pt", sans-serif;
-			color: #375270;
+			color: #fff;
 		}
 
 		/* Outermost ring */
@@ -82,6 +82,16 @@
 			margin-top: 0;
 			margin-bottom: 0;
 		}
+
+		.dusk {
+			color: #627793;
+		}
+
+		.light {
+			background: #ccc;
+			margin-bottom: 20px;
+		}
+
 	</style>
 	<script src="//use.typekit.net/jeq0lgz.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
@@ -89,12 +99,23 @@
 
 <body>
 
-<h1>Poynt logo using CSS and Typekit for the font</h1>
+	<h1>Poynt logo using CSS and Typekit for the font</h1>
 
-<article class="poyntLogo">
-	<p class="poyntLogoTitle">POYNT</p>
-	<p class="poyntLogoTagline">The world’s first smart payment terminal</p>
-</article>
+	<div class="light">
+		<article class="poyntLogo">
+			<p class="poyntLogoTitle">POYNT</p>
+			<p class="poyntLogoTagline">The world’s first smart payment terminal</p>
+		</article>
+
+		<p>Original image below</p>
+		<img src="images/poyntLogo100.png" />
+	</div>
+
+	<article class="poyntLogo dusk">
+		<p class="poyntLogoTitle">POYNT</p>
+		<p class="poyntLogoTagline">The world’s first smart payment terminal</p>
+	</article>
+
 
 </body>
 </html>
