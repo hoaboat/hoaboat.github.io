@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>Poynt Logo</title>
+	<meta charset="utf-8"/>
+	<meta name="keywords" content="Poynt Logo"/>
+	<meta name="description" content="Poynt logo created with CSS"/>
+	<meta name="author" content="Hoa Doan Klein" />
+
+	<style>
+		.poyntLogo {
+			position: relative;
+			display: table;
+			height: 100px;
+			font-family: "futura-pt", sans-serif;
+			font-weight: bold;
+			color: #fff;
+		}
+
+		/* Animation on hover */
+		.poyntLogo:hover > .poyntLogoTagline {
+			-webkit-animation: point 4s linear 20;
+			-moz-animation: point 4s linear 20;
+			-o-animation: point 4s linear 20;
+			animation: point 4s linear 20;
+		}
+
+		/* White ring */
+		.poyntLogoTagline {
+			content: "";
+			position: absolute;
+			top: 14px;
+			left: 14px;
+			background: #fff;
+			width: 72px;
+			height: 72px;
+			border-radius: 72px;
+			color: rgba(0, 0, 0, 0);
+			-webkit-transition: -webkit-transform 1s;
+			-moz-transition: -moz-transform 1s;
+			-o-transition: -o-transform 1s;
+			transition: transform 1s;
+		}
+
+		/* Small dark blue circle */
+		.poyntLogoTagline::before {
+			content: "";
+			position: absolute;
+			top: 19px;
+			left: 19px;
+			width: 34px;
+			height: 34px;
+			border-radius: 34px;
+			background: #375270;
+		}
+
+		/* White pointer */
+		.poyntLogoTagline::after {
+			content: "";
+			position: absolute;
+			top: -15px;
+			left: 60px;
+			width: 3px;
+			border-width: 18px 9px 15px 9px;
+			border-color: #fff transparent transparent transparent;
+			border-style: solid;
+			-webkit-transform: rotate(225deg);
+			-moz-transform: rotate(225deg);
+			-ms-transform: rotate(225deg);
+			-o-transform: rotate(225deg);
+			transform: rotate(225deg);
+		}
+
+		/* Poynt word */
+		.poyntLogoTitle {
+			display: table-cell;
+			vertical-align: middle;
+			padding-left: 120px;
+			font-size: 80px;
+			letter-spacing: 9px;
+		}
+
+		/* Outer blue ring */
+		.poyntLogoTitle:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100px;
+			height: 100px;
+			border-radius: 100px;
+			color: rgba(0, 0, 0, 0);
+			background: #627793;
+		}
+
+		.poyntLogoTitle,
+		.poyntLogoTagline {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		.dusk {
+			color: #627793;
+		}
+
+		.light {
+			background: #ccc;
+			margin-bottom: 20px;
+		}
+
+		h2 {
+			margin-top: 50px;
+		}
+
+		/* Animation on click */
+		.spin {
+			-webkit-animation: point 4s linear 20;
+			-moz-animation: point 4s linear 20;
+			-o-animation: point 4s linear 20;
+			animation: point 4s linear 20;
+		}
+
+		@-webkit-keyframes point {
+			50% {
+				-webkit-transform: rotate(180deg);
+			}
+
+			100% {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+
+		@-moz-keyframes point {
+			50% {
+				-moz-transform: rotate(180deg);
+			}
+
+			100% {
+				-moz-transform: rotate(360deg);
+			}
+		}
+
+		@-o-keyframes point {
+			50% {
+				-o-transform: rotate(180deg);
+			}
+
+			100% {
+				-o-transform: rotate(360deg);
+			}
+		}
+
+		@keyframes point {
+			50% {
+				transform: rotate(180deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+	</style>
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="//use.typekit.net/jeq0lgz.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body>
+
+	<h1>Poynt logo using CSS, and Typekit for font</h1>
+
+	<div class="light">
+		<h2>CSS: Poynt logo with white text</h2>
+		<article class="poyntLogo">
+			<p class="poyntLogoTitle">POYNT</p>
+			<p class="poyntLogoTagline">The world’s first smart payment terminal</p>
+		</article>
+
+		<h2>Image: Poynt logo</h2>
+		<img src="images/poyntLogo100.png" />
+	</div>
+
+	<h2>CSS: Poynt logo with colored text</h2>
+	<article class="poyntLogo dusk">
+		<p class="poyntLogoTitle">POYNT</p>
+		<p class="poyntLogoTagline">The world’s first smart payment terminal</p>
+	</article>
+
+	<script>
+		$('.poyntLogo').on('click', function(event) {
+			var $target = $(event.target);
+			if ($target.hasClass('poyntLogoTitle')) {
+				$target.siblings('.poyntLogoTagline').toggleClass('spin');
+			} else if ($target.hasClass('poyntLogoTagline')) {
+				$target.toggleClass('spin');
+			} else if ($target.hasClass('poyntLogo')) {
+				$target.find('.poyntLogoTagline').toggleClass('spin');
+			}
+		});
+	</script>
+
+</body>
+</html>
