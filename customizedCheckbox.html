@@ -18,8 +18,13 @@
 
 			}
 
-			a {
+			.imageLink {
 				outline: none;
+			}
+
+			.imageLink:hover,
+			.imageLink:focus {
+				box-shadow: 0 0 1px 1px #333;
 			}
 
 			.keepMeLogin {
@@ -125,6 +130,10 @@
 				margin-bottom: 30px;
 			}
 
+			.something {
+				margin: 10px;
+			}
+
 		</style>
 		<script src="js/jquery-1.11.2.min.js"></script>
 	</head>
@@ -136,7 +145,7 @@
 					<input type="checkbox" name="rememberMe" value="rememberMe" id="keepMeLoggedIn" class="checkboxInput" id="keepMeLoggedIn" />
 					<label for="keepMeLoggedIn" class="checkboxLabel">Stay logged in for faster checkout</label>
 					<div class="question">
-						<a href="#keepMeLoginTerms" class="keepMeLoginAbout" id="keepMeLoginAbout" title="">About stay logged in</a>
+						<a href="#keepMeLoginTerms" class="keepMeLoginAbout imageLink" id="keepMeLoginAbout" title="">About stay logged in</a>
 						<div class="keepMeLoginTerms" id="keepMeLoginTerms">
 							<h2 class="aboutKeepMeLoggedIn">Stay logged in for faster checkout</h2>
 							<p>Paragraph 1</p>
@@ -153,7 +162,7 @@
 					<input type="checkbox" name="rememberMe2" value="rememberMe2" class="checkboxInput" id="keepMeLoggedIn2" />
 					<label for="keepMeLoggedIn2" class="checkboxLabel">Stay logged in for faster checkout and some really, really, super, duper, extra long text here that will only grow longer with adaptation and localization</label>
 					<div class="question">
-						<a href="#keepMeLoginTerms2" class="keepMeLoginAbout" title="">About stay logged in</a>
+						<a href="#keepMeLoginTerms2" class="keepMeLoginAbout imageLink" title="">About stay logged in</a>
 						<div class="keepMeLoginTerms" id="keepMeLoginTerms2">
 							<h2 class="aboutKeepMeLoggedIn">Stay logged in for faster checkout</h2>
 							<p>Paragraph 1</p>
@@ -164,6 +173,14 @@
 					</div>
 				</div>
 			</div>
+
+			<div class="something">
+				<input type="checkbox" name="something" value="something" id="something"/>
+				<label for="something">Label for checkbox</label>
+				<a href="#something">Some anchor here</a>
+			</div>
+
+
 		</div>
 	</body>
 	<script>
