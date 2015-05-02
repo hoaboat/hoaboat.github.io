@@ -13,12 +13,12 @@
 				font-size: 15px;
 			}
 
-			.keepMeLogin {
+			.customizedCheckbox {
 				position: relative;
 				display: table;
 			}
 
-			.checkboxLabel {
+			.customizedCheckboxLabel {
 				color: #2c2e2f;
 				display: table-cell;
 				vertical-align: middle;
@@ -26,33 +26,35 @@
 				line-height: 1.35em;
 			}
 
-			.checkboxLabel::before {
+			.customizedCheckboxLabel:before {
 				content: "";
 				position: absolute;
-				top: 1px;
+				top: 0;
 				left: 0;
 				width: 26px;
-				height: 26px;
+				height: 25px;
 				background: url('images/sprite_forms_v2_1xCopy.png') -9px 0;
 				background-size: 40px;
+				box-sizing: border-box;
 			}
 
-			.checkboxInput {
-				display: table-cell;
-				height: 21px;
-				width: 21px;
+			.customizedCheckboxInput {
+				margin: 0;
+				height: 25px;
+				width: 26px;
+				vertical-align: middle;
 				opacity: 0;
 			}
 
-			.checkboxInput:checked + .checkboxLabel::before {
+			.customizedCheckboxInput:checked + .customizedCheckboxLabel:before {
 				background-position: -9px -400px;
 			}
 
-			.checkboxInput:focus + .checkboxLabel::before {
+			.customizedCheckboxInput:focus + .customizedCheckboxLabel:before {
 				background-position: -9px -4601px;
 			}
 
-			.checkboxInput:checked:focus + .checkboxLabel::before {
+			.customizedCheckboxInput:checked:focus + .customizedCheckboxLabel:before {
 				background-position: -9px -4745px;
 			}
 
@@ -65,7 +67,7 @@
 				background: #F7F9FA;
 			}
 
-			.keepMeLoginContainer {
+			.exampleContainer {
 				margin-bottom: 30px;
 			}
 
@@ -78,26 +80,24 @@
 	</head>
 	
 	<body>
+		<h1>Customized checkbox</h1>
 		<div class="container">
-			<div id="keepMeLogin" class="keepMeLoginContainer">
-				<div class="keepMeLogin">
-					<input type="checkbox" name="rememberMe" value="rememberMe" id="keepMeLoggedIn" class="checkboxInput" id="keepMeLoggedIn" />
-					<label for="keepMeLoggedIn" class="checkboxLabel">Yada Yada Yada Yada Yada Yada</label>
+			<div class="exampleContainer">
+				<div class="customizedCheckbox">
+					<input type="checkbox" name="name1" value="name1" id="firstInput" class="customizedCheckboxInput" /><label for="firstInput" class="customizedCheckboxLabel">Yada Yada Yada Yada Yada Yada</label>
 				</div>
 			</div>
 
-			<div class="keepMeLoginContainer">
-				<div class="keepMeLogin">
-					<input type="checkbox" name="rememberMe2" value="rememberMe2" class="checkboxInput" id="keepMeLoggedIn2" />
-					<label for="keepMeLoggedIn2" class="checkboxLabel">Yada Yada Yada Yada Yada Yada and some really, really, super, duper, extra long text here that will only grow longer with adaptation and localization</label>
+			<div class="exampleContainer">
+				<div class="customizedCheckbox">
+					<input type="checkbox" name="name2" value="name2" class="customizedCheckboxInput" id="secondInput" /><label for="secondInput" class="customizedCheckboxLabel">Yada Yada Yada Yada Yada Yada and some really, really, super, duper, extra long text here that will only grow longer with adaptation and localization</label>
 				</div>
 			</div>
 
+			<h2>Default browser checkbox; for comparison</h2>
 			<div class="something">
-				<input type="checkbox" name="something" value="something" id="something"/>
-				<label for="something">Label for checkbox</label>
+				<input type="checkbox" name="something" value="something" id="something"/><label for="something">Label for checkbox</label>
 			</div>
-
 
 		</div>
 	</body>
