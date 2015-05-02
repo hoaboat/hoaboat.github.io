@@ -26,7 +26,7 @@
 				line-height: 1.35em;
 			}
 
-			.customizedCheckboxLabel:before {
+			.customizedCheckboxLabel::before {
 				content: "";
 				position: absolute;
 				top: 0;
@@ -47,15 +47,15 @@
 				opacity: 0;
 			}
 
-			.customizedCheckboxInput:checked + .customizedCheckboxLabel:before {
+			.customizedCheckboxInput:checked + .customizedCheckboxLabel::before {
 				background-position: -9px -400px;
 			}
 
-			.customizedCheckboxInput:focus + .customizedCheckboxLabel:before {
+			.customizedCheckboxInput:focus + .customizedCheckboxLabel::before {
 				background-position: -9px -4601px;
 			}
 
-			.customizedCheckboxInput:checked:focus + .customizedCheckboxLabel:before {
+			.customizedCheckboxInput:checked:focus + .customizedCheckboxLabel::before {
 				background-position: -9px -4745px;
 			}
 
@@ -95,7 +95,7 @@
 				</div>
 			</div>
 
-			<h2>Default browser checkbox; for comparison</h2>
+			<h2>Default browser checkbox for comparison</h2>
 			<div class="something">
 				<input type="checkbox" name="something" value="something" id="something"/><label for="something">Label for checkbox</label>
 			</div>
