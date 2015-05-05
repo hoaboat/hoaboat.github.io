@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>2x image example</title>
+
+	<meta charset="utf-8" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+
+	<style>
+		body {
+			font-family: HelveticaNeue, HelveticaNeue-Light, 'Helvetica Neue Light', helvetica, arial, sans-serif;
+			font-size: 15px;
+		}
+
+		.twenty {
+			width: 20px;
+		}
+
+		.twentyOne {
+			width: 21px;
+		}
+
+		.demoContainer {
+			display: inline-block;
+			margin-right: 10px;
+			height: 18px;
+			background: url('images/sprite_forms_2x.png') -9px -1000px transparent no-repeat;
+			background-size: 40px;
+			border: 1px solid #000;
+		}
+
+		.container {
+			margin: 40px;
+			padding: 70px;
+			width: 460px;
+			height: 200px;
+			background: #F7F9FA;
+		}
+
+		.exampleContainer {
+			margin-bottom: 30px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h1>2x image example</h1>
+
+	<div class="container">
+		<h2>20px and 21px wide containers</h2>
+
+		<div class="exampleContainer">
+			<div class="twenty demoContainer"></div>
+			<div class="twentyOne demoContainer"></div>
+		</div>
+	</div>
+</body>
+</html>
