@@ -1,0 +1,115 @@
+.myControl {
+    display: table;
+    width: 100%;
+}
+
+.textInput,
+.refresh,
+.audio {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.textInput {
+    min-width: 138px;
+}
+
+.refresh {
+    width: 56px;
+}
+
+.audio {
+    width: 40px;
+}
+
+.accessAid {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px,1px,1px,1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.hide {
+    display: none;
+}
+
+.textInput input {
+    height: 40px;
+    width: 100%;
+    padding: 0 10px;
+    border: 1px solid #aaa;
+    background: #fff;
+    text-overflow: ellipsis;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: #000;
+    font-size: 1em;
+}
+
+.pushButton {
+    display: block;
+    height: 38px;
+    width: 38px;
+    border: 1px solid;
+    border-color: #ddd #d9d9d9 #bdbdbd;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    text-indent: -9999em;
+    direction: ltr;
+    background: url('../images/ui-sprite.png') #dedede no-repeat;
+
+    /*background: -moz-linear-gradient(center bottom,#dedede 0,#dedede 20%,#f5f5f5 100%);
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(0%,#dedede),color-stop(20%,#dedede),color-stop(100%,#f5f5f5));
+    background: -webkit-linear-gradient(bottom, #dedede 0, #dedede 20%, #f5f5f5 100%);
+    background: -ms-linear-gradient(bottom,#dedede 0,#dedede 20%,#f5f5f5 100%);
+    background: -o-linear-gradient(bottom,#dedede 0,#dedede 20%,#f5f5f5 100%);
+    background: linear-gradient(bottom,#dedede 0,#dedede 20%,#f5f5f5 100%);*/
+}
+
+.reload {
+    margin: 0 8px;
+    background-position: -31px -3388px;
+}
+
+.play {
+    background-position: -31px -3489px;
+}
+
+.examples {
+    margin-bottom: 25px;
+    height: 45px;
+    padding: 25px;
+}
+
+.example1 {
+    width: 300px;
+    background: pink;
+}
+
+.example2 {
+    width: 350px;
+    background: #cfc;
+}
+
+.example3 {
+    width: 400px;
+    background: #ffc;
+}
+
+.example4 {
+    width: 450px;
+    background: #ccf;
+}
