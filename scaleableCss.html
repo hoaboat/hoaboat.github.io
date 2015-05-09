@@ -89,15 +89,22 @@
 
 		<h2>Steps two: ask the question, “Does the CSS rule accommodate changes in parents?”</h2>
 
-		<p>With more sites becoming responsive, this question becomes quite pertinent. Are you using fixed units in your modules and changing their values at each breakpoint? If you do this, then every time a new breakpoint is added, you will need to modify the values for that breakpoint. This isn’t a scalable solution. What you want to do is make the module’s width fluid so that it conforms to its parent’s width. But making a module’s width fluid isn’t just simply replacing the fixed units with percentages. The form input with control buttons example below will demonstrate this. Even if your site isn’t responsive, this technique will be helpful if you ever need to move a module to a different part of the page. The module will just expand or contract to its new parent’s width.</p>
+		<p>With more sites becoming responsive, this question becomes quite pertinent. Are you using fixed units in
+			your modules and changing their values at each breakpoint? If you do this, then every time a new
+			breakpoint is added, you will need to modify the values for that breakpoint. This isn’t a scalable
+			solution. What you want to do is make the module’s width fluid so that it conforms to its parent’s
+			width. But making a module’s width fluid isn’t just simply replacing the fixed units with percentages.
+			Example 3 will demonstrate this. Even if your site isn’t responsive,
+			this technique will be helpful if you ever need to move a module to a different part of the page. The
+			module will just expand or contract to its new parent’s width.</p>
 
-		<p>Example 3: form input with control buttons</p>
+		<p>Example 3: form input with buttons</p>
 
-		<img src="images/inputWithButtons.png" alt="form input with control buttons example" class="controls">
+		<img src="images/inputWithButtons.png" alt="form input with buttons example" class="controls">
 
 		<p>The challenge here lies with the two buttons on the right. We want to maintain the width of those buttons.
 			How then can we make this module’s width fluid? We cannot use percentages because that will distort the
-			buttons. Here is <a href="http://hoaboat.github.io/inputWithControlButtons.html" target="_blank">my
+			buttons. Here is <a href="http://hoaboat.github.io/inputWithButtons.html" target="_blank">my
 				solution</a> which works down to Internet Explorer 8.</p>
 
 		<h2>Step three: know your CSS</h2>
