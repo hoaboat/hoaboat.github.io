@@ -1,13 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Nonscalable Checkbox</title>
+		<title>Non-scalable Checkbox</title>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" href="css/nonscalableCheckbox.css" />
+		<style>
+			body {
+				font-family: arial, sans-serif;
+				font-size: 15px;
+			}
+
+			.checkbox input[type=checkbox] {
+				position: absolute !important;
+				clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+				clip: rect(1px, 1px, 1px, 1px);
+				padding: 0 !important;
+				border: 0 !important;
+				height: 1px !important;
+				width: 1px !important;
+				overflow: hidden;
+			}
+
+			.checkbox input[type=checkbox] + label {
+				display: inline-block;
+				min-height: 25px;
+				padding-left: 35px;
+				line-height: 27px;
+				background-image: url("images/sprite_forms_2x_v1.png");
+				background-repeat: no-repeat;
+				background-size: 40px;
+				background-position: -9px 0;
+				vertical-align: middle;
+				cursor: pointer;
+			}
+
+			.checkbox input[type=checkbox]:checked + label,
+			.checkbox input[type=checkbox]:focus:checked + label {
+				background-position: -9px -400px;
+			}
+
+			.checkbox input[type=checkbox]:focus + label {
+				background-position: -9px -200px;
+			}
+
+			.container {
+				margin: 40px;
+				padding: 70px;
+				width: 460px;
+				background: #F7F9FA;
+			}
+
+			.exampleContainer {
+				margin-bottom: 30px;
+			}
+		</style>
 	</head>
 	
 	<body>
-		<h1>Nonscalable Checkbox</h1>
+		<h1>Non-scalable Checkbox</h1>
 
 		<div class="container">
 			<div class="exampleContainer">
