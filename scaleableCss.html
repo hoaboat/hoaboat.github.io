@@ -26,9 +26,10 @@
 	</head>
 	
 	<body>
-		<h1>How to Write Scaleable CSS in 3 Steps</h1>
+		<h1>How to Write Scalable CSS in 3 Steps</h1>
 
-		<p>This article is not about scaleable CSS architecture; it is about writing CSS that will scale when one or a combination of the following things occur in your application or website:</p>
+		<p>This article is not about scalable CSS architecture; it is about writing CSS that will scale when one or a
+			combination of the following things occur in your application or website:</p>
 
 		<ul>
 			<li>the content changes,</li>
@@ -37,32 +38,40 @@
 			<li>a module/component is moved to a different container</li>
 		</ul>
 
-		<p>It’s about writing CSS once and not having to revisit it when content or spacing changes.</p>
+		<p>It's about writing CSS once and not having to revisit it when content or spacing changes.</p>
 
-		<h2>Step one: ask the question, “Do the CSS rules accommodate content growth or shrinkage?”</h2>
+		<h2>Step one: ask the question, "Do the CSS rules accommodate content growth or shrinkage?"</h2>
 
-		<p>While writing the CSS rules, keep in mind that the content will change. The length of the content will grow or shrink because of content modification or localization. Will the rules that you write work for one line, as well as, multiple lines of text?</p>
+		<p>While writing the CSS rules, keep in mind that the content will change. The length of the content will grow
+			or shrink because of content modification or localization. Will the rules that you write work for one line,
+			as well as, multiple lines of text?</p>
 
-		<p>You may say that content rarely ever changes. According to Mr. Douglas Crockford “‘That hardly ever happens’ is another way of saying ‘It happens.’” You may also ask, “Why should I care about that?” If the content changes, I’ll just go and change the rule. Or when localization occurs, I can take care of that with a language stylesheet. The reasons you should care are scalability and maintainability. You don’t want to change your CSS rules every time content is changed. If you localize to more than 200 countries, you don’t want to possibly maintain that many CSS stylesheets. You simply cannot move fast with all the things you need to remember to modify.
+		<p>You may say that content rarely ever changes. According to Mr. Douglas Crockford "'That hardly ever happens'
+			is another way of saying 'It happens.'" You may also ask, "Why should I care about that?" If the content
+			changes, I'll just go and change the rule. Or when localization occurs, I can take care of that with a
+			language stylesheet. The reasons you should care are <strong>scalability</strong> and
+			<strong>maintainability</strong>. You don't want to
+			change your CSS rules every time content is changed. If you localize to more than 200 countries, you don't
+			want to possibly maintain that many CSS stylesheets. You simply cannot move fast with all the things you
+			need to remember to modify.
 		</p>
 
-		<p>Let’s see two examples of CSS solutions that accommodate for content changes.</p>
+		<p>Let's see two examples of CSS solutions that accommodate for content changes.</p>
 
 		<p>Example 1: customized checkbox</p>
 
 		<img src="images/useBillingAddress.png" alt="customized checkbox example" class="billing">
 
-		<p>At first glance, it looks simple enough. A example of the code to accomplish this could be as follows:</p>
+		<p>At first glance, it looks simple enough. An example of the code to accomplish this can be found
+			<a href="http://hoaboat.github.io/nonscaleableCheckbox.html" target="_blank">here</a>.</p>
 
-		<pre><code>
-.customizedCheckbox {
-	padding-left: 35px;
-	background: url('path/to/sprite');
-	line-height: 30px;
-}
-		</code></pre>
-
-		<p>Let’s ask the first question. Do the CSS rules above accommodate for content growth? No it doesn’t. Well then how are we going to handle when the content grows to two or three lines of text? Do we change the rule when the content changes? Do we use JavaScript to detect the container height to add a different class? Do we add a language stylesheet to handle content growth due to localization? How about we choose none of the above and do this instead: <a href="http://hoaboat.github.io/customizedCheckbox.html" target="_blank">http://hoaboat.github.io/customizedCheckbox.html</a>. As you can see, the CSS rules can gracefully and beautifully handle the content growth. No JavaScript is needed. No extra stylesheet is needed. No re-visiting the code is needed. The solution is pretty DRY.</p>
+		<p>Let's ask the first question. Do the CSS rules of the above example accommodate for content growth? No it doesn't. Well
+			then how are we going to handle when the content grows to two or three lines of text? Do we change the
+			rule when the content changes? Do we use JavaScript to detect the container height to add a different
+			class? Do we add a language stylesheet to handle content growth due to localization? How about we choose
+			none of the above and <a href="http://hoaboat.github.io/customizedCheckbox.html" target="_blank">do this</a>
+			instead. As you can see, the CSS rules can gracefully handle the content growth. No JavaScript is needed.
+			No extra stylesheet is needed. No re-visiting the code is needed. The solution is pretty DRY.</p>
 
 		<p>Example 2: customized shadow</p>
 
@@ -85,74 +94,120 @@
 }
 		</code></pre>
 
-		<p>Again, let’s ask a first question in a slightly different way. Do the CSS rules above accommodate for a growth in the container height? No, it doesn’t. The height is fixed. This was actually a bug logged against an application and the fix was to use JavaScript to detect the container height to change the shadow’s height accordingly. When I heard about the solution, I didn’t like it. It worked, but it just didn't sit right with me. I thought there had to be another solution that didn’t involve using JavaScript. Then one day while prototyping something using absolute positioning with left and right offsets set to zero, I came up with a CSS solution to the fixed-height shadow bug; I could set the top and bottom offsets to zero so that the customized shadow will grow and shrink with its container. See the code here: <a href="http://hoaboat.github.io/positionAbsolute.html" target="_blank">http://hoaboat.github.io/positionAbsolute.html</a>.</p>
+		<p>Again, let's ask a first question in a slightly different way. Do the CSS rules above accommodate for a
+			growth in the container height? No, it doesn't. The height is fixed. This was actually a bug logged against
+			an application and the fix was to use JavaScript to detect the container height to change the shadow's
+			height accordingly. When I heard about the solution, I didn't like it. It worked, but it just didn't sit
+			right with me. I thought there had to be another solution that didn't involve using JavaScript. Then one
+			day while prototyping something using absolute positioning with left and right offsets set to zero, I
+			came up with a CSS solution to the fixed-height shadow bug; I could set the top and bottom offsets to
+			zero so that the customized shadow will grow and shrink with its container. Let's see
+			the code for the <a href="http://hoaboat.github.io/positionAbsolute.html" target="_blank">customized
+			shadow</a>.
+			</p>
 
-		<h2>Steps two: ask the question, “Does the CSS rule accommodate changes in parents?”</h2>
+		<h2>Steps two: ask the question, "Does the CSS rule accommodate changes in parents?"</h2>
 
 		<p>With more sites becoming responsive, this question becomes quite pertinent. Are you using fixed units in
 			your modules and changing their values at each breakpoint? If you do this, then every time a new
-			breakpoint is added, you will need to modify the values for that breakpoint. This isn’t a scalable
-			solution. What you want to do is make the module’s width fluid so that it conforms to its parent’s
-			width. But making a module’s width fluid isn’t just simply replacing the fixed units with percentages.
-			Example 3 will demonstrate this. Even if your site isn’t responsive,
+			breakpoint is added, you will need to modify the values for that breakpoint. This isn't a scalable
+			solution. What you want to do is make the module's width fluid so that it conforms to its parent's
+			width. But making a module's width fluid isn't just simply replacing the fixed units with percentages.
+			Example 3 will demonstrate this. Even if your site isn't responsive,
 			this technique will be helpful if you ever need to move a module to a different part of the page. The
-			module will just expand or contract to its new parent’s width.</p>
+			module will just expand or contract to fit its new parent's width.</p>
 
 		<p>Example 3: form input with buttons</p>
 
 		<img src="images/inputWithButtons.png" alt="form input with buttons example" class="controls">
 
-		<p>The challenge here lies with the two buttons on the right. We want to maintain the width of those buttons.
-			How then can we make this module’s width fluid? We cannot use percentages because that will distort the
-			buttons. Here is <a href="http://hoaboat.github.io/inputWithButtons.html" target="_blank">my
+		<p>The challenge here is with the two buttons on the right. We want to maintain the width of those buttons.
+			How then can we make this module's width fluid? We cannot use percentages because that will distort the
+			buttons. After removing a few things to simplify the example but preserving the existing HTML structure I
+			came up with this <a href="http://hoaboat.github.io/inputWithButtons.html" target="_blank">
 				solution</a> which works down to Internet Explorer 8.</p>
 
 		<h2>Step three: know your CSS</h2>
 
-		<p>Did you answer “no” to either question one or two? If so, then you should work on step three. There’s more to CSS than just changing border color, font size, or padding so please, please don’t marginalize it. It is one of three crucial technologies for front-end development and because I’m on interview panels, time and time again I witness developers and development managers disregard the importance of CSS experience and expertise. More times than I can remember, after interviews have been conducted and the candidates are deemed above average in JavaScript but weak in CSS, often time members on the interview committee brush off that fact that the candidates are not strong in CSS by justifying that they can learn CSS on the job as if CSS is so easy to learn, understand, and master. I have personally been part of a conference that celebrates the awesomeness of application development only to see CSS mentioned as an afterthought. I have seen management promote many JavaScript conferences but none mention anything about CSS conferences. I have seen candidates hired for JavaScript prowess only to discover later in code reviews or pull request reviews code that look like the examples below:</p>
+		<p>Did you answer "no" to either question one or two? If so, then you should work on step three. There's more
+			to CSS than just changing border color, font size, or padding so please, please don't marginalize it.
+			It is one of three crucial technologies for front-end development and because I'm on interview panels,
+			time and time again I witness developers and development managers disregard the importance of CSS
+			experience and expertise. More times than I can remember, after interviews have been conducted and the
+			candidates are deemed above average in JavaScript but weak in CSS, often time members on the interview
+			committee brush off that fact that the candidates are not strong in CSS by justifying that they can learn
+			CSS on the job as if CSS is so easy to learn, understand, and master. I have personally been part of a
+			conference that celebrates the awesomeness of application development only to see CSS mentioned as an
+			afterthought. I have seen management promote many JavaScript conferences but none mention anything about
+			CSS conferences. I have seen candidates hired for JavaScript prowess only to discover later in code
+			reviews or pull request reviews code that look like the examples below:</p>
 
 		<p>Example 4:</p>
 
-		<code>&lt;div class=“greenCheckmark”&gt;&lt;/div&gt;</code>
+		<code>&lt;div class="greenCheckmark"&gt;&lt;/div&gt;</code>
 
 		<p>Example 5:</p>
 
 		<pre><code>
-&lt;ul class=“credit”&gt;
+&lt;ul class="credit"&gt;
 	if (cards === 5) {
-		&lt;li&gt;&lt;a href=“someUrl”&gt;card 1&lt;/a&gt; &lt;a href=“someUrl”&gt;card 2&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=“someUrl”&gt;card 3&lt;/a&gt; &lt;a href=“someUrl”&gt;card 4&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=“someUrl”&gt;card 5&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="someUrl"&gt;card 1&lt;/a&gt; &lt;a href="someUrl"&gt;card 2&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="someUrl"&gt;card 3&lt;/a&gt; &lt;a href="someUrl"&gt;card 4&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="someUrl"&gt;card 5&lt;/a&gt;&lt;/li&gt;
 	} else if (cards < 5) {
-		&lt;li&gt;&lt;a href=“someUrl”&gt;card 1&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=“someUrl”&gt;card 2&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=“someUrl”&gt;card 3&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=“someUrl”&gt;card 4&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="someUrl"&gt;card 1&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="someUrl"&gt;card 2&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="someUrl"&gt;card 3&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="someUrl"&gt;card 4&lt;/a&gt;&lt;/li&gt;
 	}
 &lt;/ul&gt;
 			</code></pre>
 
-
-		<p>Example 4 indicates that the developer is a novice with CSS. Why? Because one of the first things you learn is to not name classes that describe of the visual presentation. If the visual presentation changes, the classes make no more sense. Then you’d have to go and change the class names everywhere they are used. This is not scaleable or maintainable.
+		<p>Example 4 indicates that the developer is a novice with CSS. Why? Because one of the first things you learn
+			is to not name classes that describe of the visual presentation. If the visual presentation changes, the
+			classes make no more sense. Then you'd have to go and change the class names everywhere they are used.
+			This is not scalable or maintainable.
 		</p>
 
-		<p>Example 5 indicates that the developer has little experience with CSS layout properties. Using JavaScript they are changing the HTML so the cards can be laid out differently when the number exceeds four. There is no separation of concerns here and all of the JavaScript logic and extra HTML is completely unnecessary if the developer had known more about the properties float and display.
+		<p>Example 5 indicates that the developer has little experience with CSS layout properties. Using JavaScript
+			they are changing the HTML so the cards can be laid out differently when the number exceeds four. There is
+			no separation of concerns here and all of the JavaScript logic and extra HTML is completely unnecessary
+			if the developer had known more about the properties float and display.
 		</p>
 
-		<p>I know of application development managers who only care that their developers write good JavaScript code/modules, or know how to use closures effectively, or know how use the latest ES6 features. They shrug off the importance of knowing CSS layout properties such as position, float, z-index, and display. They turn their noses up at CSS specificity. And they care little about scaleable CSS architecture. That disregard for CSS does have consequences though; when it takes over a quarter of a year to upgrade their CSS framework. Writing clean, concise, scaleable, and well-architected CSS is just as important as writing clean, concise, scaleable, and well-architected JavaScript.
+		<p>I know of application development managers who only care that their developers write good JavaScript
+			code/modules, or know how to use closures effectively, or know how use the latest ES6 features. They
+			shrug off the importance of knowing CSS layout properties such as position, float, z-index, and display.
+			They turn their noses up at CSS specificity. And they care little about scalable CSS architecture.
+			That disregard for CSS does have consequences though; when it takes over a quarter of a year to upgrade
+			the CSS framework. Writing clean, concise, scalable, and well-architected CSS is just as important as
+			writing clean, concise, scalable, and well-architected JavaScript.
 		</p>
 
-		<p>Please don’t misunderstand me, I agree that CSS can be learned on the job; anything can be learned on the job though. But in order to be truly experienced with CSS, you must use it constantly. You must experiment with it. You must get frustrated with it and fail at it. And you must keep trying to get it right. Proficiency in JavaScript or any other technology doesn't come within one week, or within one month, or even within six months, so how can you expect proficiency in CSS to be any different?
+		<p>Please don't misunderstand me, I agree that CSS can be learned on the job; anything can be learned on the
+			job though. But in order to be truly experienced with CSS, you must use it constantly. You must experiment
+			with it. You must get frustrated with it and fail at it. And you must keep trying to get it right.
+			Proficiency in JavaScript or any other technology doesn't come within one week, or within one month, or
+			even within six months, so how can you expect proficiency in CSS to be any different?
 		</p>
 
-		<p>If your web application has a user interface then CSS is very important. So why is there more focus on writing good and scaleable JavaScript for the behavior layer than on writing good and scaleable CSS for the presentation layer? CSS has fundamentals that need to be understood well and a great number of properties that no one individual could possibly know all. I urge you all to understand the fundamentals and learn as many properties as you can because with a strong CSS foundation, a large arsenal of properties, and a yearning to make things better, you can come up with some creative and scalable CSS solutions. Kevin Ashton in How to Fly a Horse puts is beautifully,
+		<p>If your web application has a user interface then CSS is very important. So why is there more focus on
+			writing good and scalable JavaScript for the behavior layer than on writing good and scalable CSS for
+			the presentation layer? CSS has fundamentals that need to be understood well and a great number of
+			properties that no one individual could possibly know all. I urge you all to understand the fundamentals
+			and learn as many properties as you can because with a strong CSS foundation, a large arsenal of properties,
+			and a yearning to make things better, you can come up with some creative and scalable CSS solutions. Kevin
+			Ashton in How to Fly a Horse puts it nicely,
 		</p>
 
 		<blockquote>
-			The human race’s creative power is distributed in all of us, not concentrated in some of us. Our creations are to great and too numerous to come from a few steps by a few people. They must come from many steps and many people.
+			The human race's creative power is distributed in all of us, not concentrated in some of us. Our creations
+			are to great and too numerous to come from a few steps by a few people. They must come from many steps and
+			many people.
 		</blockquote>
 
-		<p>Even if you answered “yes” to one or both question one and two above, you should still work on step three because the more you know, the better a developer you will be.
+		<p>Even if you answered "yes" to one or both question one and two above, you should still work on step three
+			because the more you know, the better a developer you will be.
 		</p>
 	</body>
 </html>

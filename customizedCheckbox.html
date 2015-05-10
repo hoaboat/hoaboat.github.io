@@ -23,7 +23,6 @@
 			display: table-cell;
 			vertical-align: middle;
 			padding-left: 10px;
-			line-height: 1.35em;
 		}
 
 		.customizedCheckboxLabel::before {
@@ -59,11 +58,9 @@
 		}
 
 		.container {
-			position: relative;
 			margin: 40px;
 			padding: 70px;
 			width: 460px;
-			height: 200px;
 			background: #F7F9FA;
 		}
 
@@ -71,34 +68,26 @@
 			margin-bottom: 30px;
 		}
 
-		.something {
-			margin: 10px;
-		}
-
 	</style>
 	<script src="js/jquery-1.11.2.min.js"></script>
 </head>
 
 <body>
-<h1>Customized checkbox with 2x sprite</h1>
-<div class="container">
-	<div class="exampleContainer">
-		<div class="customizedCheckbox">
-			<input type="checkbox" name="name1" value="name1" id="firstInput" class="customizedCheckboxInput" /><label for="firstInput" class="customizedCheckboxLabel">Yada Yada Yada Yada Yada Yada</label>
+	<h1>Customized checkbox with 2x sprite</h1>
+	<div class="container">
+		<div class="exampleContainer">
+			<div class="customizedCheckbox">
+				<input type="checkbox" name="name1" value="name1" id="firstInput" class="customizedCheckboxInput" />
+				<label for="firstInput" class="customizedCheckboxLabel">Use billing address</label>
+			</div>
+		</div>
+
+		<div class="exampleContainer">
+			<div class="customizedCheckbox">
+				<input type="checkbox" name="name2" value="name2" class="customizedCheckboxInput" id="secondInput" />
+				<label for="secondInput" class="customizedCheckboxLabel">Use billing address and Yada Yada Yada Yada Yada Yada and some really, really, super, duper, extra long text here that will only grow longer with adaptation and localization</label>
+			</div>
 		</div>
 	</div>
-
-	<div class="exampleContainer">
-		<div class="customizedCheckbox">
-			<input type="checkbox" name="name2" value="name2" class="customizedCheckboxInput" id="secondInput" /><label for="secondInput" class="customizedCheckboxLabel">Yada Yada Yada Yada Yada Yada and some really, really, super, duper, extra long text here that will only grow longer with adaptation and localization</label>
-		</div>
-	</div>
-
-	<h2>Default browser checkbox for comparison</h2>
-	<div class="something">
-		<input type="checkbox" name="something" value="something" id="something"/><label for="something">Label for checkbox</label>
-	</div>
-
-</div>
 </body>
 </html>
