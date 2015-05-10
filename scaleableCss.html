@@ -51,25 +51,27 @@
 			changes, I'll just go and change the rule. Or when localization occurs, I can take care of that with a
 			language stylesheet. The reasons you should care are <strong>scalability</strong> and
 			<strong>maintainability</strong>. You don't want to
-			change your CSS rules every time content is changed. If you localize to more than 200 countries, you don't
-			want to possibly maintain that many CSS stylesheets. You simply cannot move fast with all the things you
+			change your CSS rules every time content changes. If you localize to more than 200 countries, you don't
+			want to possibly maintain that many stylesheets. You simply cannot move fast with all the things you
 			need to remember to modify.
 		</p>
 
-		<p>Let's see two examples of CSS solutions that accommodate for content changes.</p>
+		<p>Let's see two examples of CSS solutions that accommodate for content change.</p>
 
 		<p>Example 1: customized checkbox</p>
 
 		<img src="images/useBillingAddress.png" alt="customized checkbox example" class="billing">
 
-		<p>At first glance, it looks simple enough. An example of the code to accomplish this can be found
-			<a href="http://hoaboat.github.io/nonscalableCheckbox.html" target="_blank">here</a>.</p>
-
-		<p>Let's ask the first question. Do the CSS rules of the above example accommodate for content growth? No it doesn't. Well
-			then how are we going to handle when the content grows to two or three lines of text? Do we change the
+		<p>At first glance, the customized checkbox looks simple enough to implement.
+			A copy of a live implementation of this customized checkbox can be found
+			<a href="http://hoaboat.github.io/nonscalableCheckbox.html" target="_blank">here</a>. As can be seen
+			by the example, the CSS rules do not accommodate for content growth.
+			How then are we going to handle the situation when the content grows to two or three lines of text?
+			Do we change the
 			rule when the content changes? Do we use JavaScript to detect the container height to add a different
 			class? Do we add a language stylesheet to handle content growth due to localization? How about we choose
-			none of the above and <a href="http://hoaboat.github.io/customizedCheckbox.html" target="_blank">do this</a>
+			none of those options and
+			<a href="http://hoaboat.github.io/customizedCheckbox.html" target="_blank">implement this</a>
 			instead. As you can see, the CSS rules can gracefully handle the content growth. No JavaScript is needed.
 			No extra stylesheet is needed. No re-visiting the code is needed. The solution is pretty DRY.</p>
 
@@ -94,13 +96,14 @@
 }
 		</code></pre>
 
-		<p>Again, let's ask a first question in a slightly different way. Do the CSS rules above accommodate for a
+		<p>Let's ask the first question in a slightly different way. Do the CSS rules above accommodate for a
 			growth in the container height? No, it doesn't. The height is fixed. This was actually a bug logged against
 			an application and the fix was to use JavaScript to detect the container height to change the shadow's
 			height accordingly. When I heard about the solution, I didn't like it. It worked, but it just didn't sit
 			right with me. I thought there had to be another solution that didn't involve using JavaScript. Then one
-			day while prototyping something using absolute positioning with left and right offsets set to zero, I
-			came up with a CSS solution to the fixed-height shadow bug; I could set the top and bottom offsets to
+			day while I was prototyping using absolute positioning, I
+			came up with a CSS solution to the fixed-height shadow bug&mdash;something that I had forgotten about
+			absolute positioning; I could set the top and bottom offsets to
 			zero so that the customized shadow will grow and shrink with its container. Let's see
 			the code for the <a href="http://hoaboat.github.io/positionAbsolute.html" target="_blank">customized
 			shadow</a>.
