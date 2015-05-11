@@ -46,8 +46,8 @@
 			or shrink because of content modification or localization. Will the rules that you write work for one line,
 			as well as, multiple lines of text?</p>
 
-		<p>You may say that content rarely ever changes. According to Mr. Douglas Crockford "'That hardly ever happens'
-			is another way of saying 'It happens.'" You may also ask, "Why should I care about that?" If the content
+		<p>You may say that content rarely ever changes. According to <cite>Douglas Crockford</cite>, <q>That hardly ever happens
+			is another way of saying it happens.</q> You may also ask, "Why should I care about that?" If the content
 			changes, I'll just go and change the rule. Or when localization occurs, I can take care of that with a
 			language stylesheet. The reasons you should care are <strong>scalability</strong> and
 			<strong>maintainability</strong>. You don't want to
@@ -72,7 +72,7 @@
 			class? Do we add a language stylesheet to handle content growth due to localization? How about we choose
 			none of those options and
 			<a href="http://hoaboat.github.io/customizedCheckbox.html" target="_blank">implement this</a>
-			instead. As you can see, the CSS rules can gracefully handle the content growth. No JavaScript is needed.
+			instead. This implementation gracefully handles the content growth. No JavaScript is needed.
 			No extra stylesheet is needed. No re-visiting the code is needed. The solution is pretty DRY.</p>
 
 		<p>Example 2: customized shadow</p>
@@ -81,20 +81,20 @@
 
 		<p>A example of the code to accomplish this could be as follows:</p>
 
-		<pre><code>
-.container::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	right: -5px;
-	width: 5px;
-	height: 100px;
-	background-image: -webkit-linear-gradient(left, black, transparent);
-	background-image: -moz-linear-gradient(left, black, transparent);
-	background-image: -o-linear-gradient(left, black, transparent);
-	background-image: linear-gradient(left, black, transparent);
-}
-		</code></pre>
+<pre><code>
+	.container::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: -5px;
+		width: 5px;
+		height: 100px;
+		background-image: -webkit-linear-gradient(left, black, transparent);
+		background-image: -moz-linear-gradient(left, black, transparent);
+		background-image: -o-linear-gradient(left, black, transparent);
+		background-image: linear-gradient(left, black, transparent);
+	}
+</code></pre>
 
 		<p>Let's ask the first question in a slightly different way. Do the CSS rules above accommodate for a
 			growth in the container height? No, it doesn't. The height is fixed. This was actually a bug logged against
@@ -106,7 +106,7 @@
 			absolute positioning; I could set the top and bottom offsets to
 			zero so that the customized shadow will grow and shrink with its container. Let's see
 			the code for the <a href="http://hoaboat.github.io/positionAbsolute.html" target="_blank">customized
-			shadow</a>.
+			shadow</a>. Go ahead and change the height of the container and watch the shadow adjust accordingly.
 			</p>
 
 		<h2>Steps two: ask the question, "Does the CSS rule accommodate changes in parents?"</h2>
@@ -124,46 +124,74 @@
 
 		<img src="images/inputWithButtons.png" alt="form input with buttons example" class="controls">
 
-		<p>The challenge here is with the two buttons on the right. We want to maintain the width of those buttons.
+		<p>The current live implementation of this module has the input width declared as a percentage of the parent
+			and the buttons are floated left like below:</p>
+
+<pre><code>
+	.codeContainer {
+		width: 75%;
+	}
+
+	.refresh,
+	.audio {
+		float: left;
+		width: 38px;
+	}
+</code></pre>
+
+		<p>The problem with the code above is that there will always be some empty space on the right of the buttons
+			except for <em>one</em> scenario when the module's total width actually equals the parent's width.
+			The challenge here is with the two buttons on the right. We want to maintain the width of those buttons.
 			How then can we make this module's width fluid? We cannot use percentages because that will distort the
-			buttons. After removing a few things to simplify the example but preserving the existing HTML structure I
+			buttons. After removing a few things to simplify the example but preserving the existing HTML structure, I
 			came up with this <a href="http://hoaboat.github.io/inputWithButtons.html" target="_blank">
 				solution</a> which works down to Internet Explorer 8.</p>
 
 		<h2>Step three: know your CSS</h2>
 
 		<p>Did you answer "no" to either question one or two? If so, then you should work on step three. There's more
-			to CSS than just changing border color, font size, or padding so please, please don't marginalize it.
-			It is one of three crucial technologies for front-end development and because I'm on interview panels,
-			time and time again I witness developers and development managers disregard the importance of CSS
-			experience and expertise. More times than I can remember, after interviews have been conducted and the
-			candidates are deemed above average in JavaScript but weak in CSS, often time members on the interview
-			committee brush off that fact that the candidates are not strong in CSS by justifying that they can learn
-			CSS on the job as if CSS is so easy to learn, understand, and master. I have personally been part of a
-			conference that celebrates the awesomeness of application development only to see CSS mentioned as an
-			afterthought. I have seen management promote many JavaScript conferences but none mention anything about
-			CSS conferences. I have seen candidates hired for JavaScript prowess only to discover later in code
-			reviews or pull request reviews code that look like the examples below:</p>
+			to CSS than just changing border color, font size, or padding. It is one of only <em>three</em>
+			essential technologies for front-end development so please don't marginalize it. Unfortunately
+			though, I witness CSS being marginalized over and over again by development managers <em>and</em>
+			developers. How is CSS being marginalized? I'll give you five examples.</p>
+
+		<ul>
+			<li>I'm on interview panels. When a candidate is not strong in CSS, members on the interview
+				panel brush off that fact by justifying the candidate can learn CSS on the job. Therefore
+				implying that CSS is so easy to understand and master.</li>
+			<li>I have personally been part of a conference that celebrates the awesomeness of
+				application development only to see CSS mentioned as an afterthought because it's not
+				technical enough.</li>
+			<li>I have seen management promote many JavaScript conferences, but they don't promote or care for
+				CSS conferences.</li>
+			<li>I know of application development managers who only care that their developers write good JavaScript.
+				They disregard the importance of CSS expertise and experience. That disregard for CSS does have
+				consequences though; when it takes over three months to upgrade their CSS framework.</li>
+			<li>I have seen candidates hired for JavaScript prowess only to discover later during code
+				reviews or pull request reviews committed code that look like Examples 4 and 5 below</li>
+		</ul>
 
 		<p>Example 4:</p>
 
-		<code>&lt;div class="greenCheckmark"&gt;&lt;/div&gt;</code>
+		<pre><code>
+	&lt;div class="blueIcon"&gt;&lt;/div&gt;
+		</code></pre>
 
 		<p>Example 5:</p>
 
 		<pre><code>
-&lt;ul class="credit"&gt;
-	if (cards === 5) {
-		&lt;li&gt;&lt;a href="someUrl"&gt;card 1&lt;/a&gt; &lt;a href="someUrl"&gt;card 2&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="someUrl"&gt;card 3&lt;/a&gt; &lt;a href="someUrl"&gt;card 4&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="someUrl"&gt;card 5&lt;/a&gt;&lt;/li&gt;
-	} else if (cards < 5) {
-		&lt;li&gt;&lt;a href="someUrl"&gt;card 1&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="someUrl"&gt;card 2&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="someUrl"&gt;card 3&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="someUrl"&gt;card 4&lt;/a&gt;&lt;/li&gt;
-	}
-&lt;/ul&gt;
+	&lt;ul class="credit"&gt;
+		if (cards === 5) {
+			&lt;li&gt;&lt;a href="someUrl"&gt;card 1&lt;/a&gt; &lt;a href="someUrl"&gt;card 2&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="someUrl"&gt;card 3&lt;/a&gt; &lt;a href="someUrl"&gt;card 4&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="someUrl"&gt;card 5&lt;/a&gt;&lt;/li&gt;
+		} else if (cards < 5) {
+			&lt;li&gt;&lt;a href="someUrl"&gt;card 1&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="someUrl"&gt;card 2&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="someUrl"&gt;card 3&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="someUrl"&gt;card 4&lt;/a&gt;&lt;/li&gt;
+		}
+	&lt;/ul&gt;
 			</code></pre>
 
 		<p>Example 4 indicates that the developer is a novice with CSS. Why? Because one of the first things you learn
@@ -174,24 +202,17 @@
 
 		<p>Example 5 indicates that the developer has little experience with CSS layout properties. Using JavaScript
 			they are changing the HTML so the cards can be laid out differently when the number exceeds four. There is
-			no separation of concerns here and all of the JavaScript logic and extra HTML is completely unnecessary
-			if the developer had known more about the properties float and display.
-		</p>
-
-		<p>I know of application development managers who only care that their developers write good JavaScript
-			code/modules, or know how to use closures effectively, or know how use the latest ES6 features. They
-			shrug off the importance of knowing CSS layout properties such as position, float, z-index, and display.
-			They turn their noses up at CSS specificity. And they care little about scalable CSS architecture.
-			That disregard for CSS does have consequences though; when it takes over a quarter of a year to upgrade
-			the CSS framework. Writing clean, concise, scalable, and well-architected CSS is just as important as
-			writing clean, concise, scalable, and well-architected JavaScript.
+			no separation of concerns here and all the JavaScript logic and extra HTML is completely unnecessary
+			if the developer had known more about the properties <code>float</code> and <code>display</code>.
 		</p>
 
 		<p>Please don't misunderstand me, I agree that CSS can be learned on the job; anything can be learned on the
 			job though. But in order to be truly experienced with CSS, you must use it constantly. You must experiment
 			with it. You must get frustrated with it and fail at it. And you must keep trying to get it right.
 			Proficiency in JavaScript or any other technology doesn't come within one week, or within one month, or
-			even within six months, so how can you expect proficiency in CSS to be any different?
+			even within six months, so how can you expect proficiency in CSS to be any different? Writing clean,
+			concise, scalable, and well-designed CSS is just as important as
+			writing clean, concise, scalable, and well-designed JavaScript.
 		</p>
 
 		<p>If your web application has a user interface then CSS is very important. So why is there more focus on
@@ -199,8 +220,8 @@
 			the presentation layer? CSS has fundamentals that need to be understood well and a great number of
 			properties that no one individual could possibly know all. I urge you all to understand the fundamentals
 			and learn as many properties as you can because with a strong CSS foundation, a large arsenal of properties,
-			and a yearning to make things better, you can come up with some creative and scalable CSS solutions. Kevin
-			Ashton in How to Fly a Horse puts it nicely,
+			and a yearning to make things better, you can come up with some creative and scalable CSS solutions.
+			<cite>Kevin Ashton in How to Fly a Horse</cite> puts it nicely,
 		</p>
 
 		<blockquote>
