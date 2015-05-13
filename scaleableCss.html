@@ -40,6 +40,19 @@
 
 		<p>It's about writing CSS once and not having to revisit it when content or spacing changes.</p>
 
+		<p>
+			I've been a Web Developer, Front-end Engineer, User Interface Engineer, or whichever title you like to use
+			for over a decade. I started as a contractor and worked
+			my way up to being a Member of Technical Staff. Over the years I developed a passion for clean and
+			scalable code because of a few passionate colleagues I've been privileged to work with.
+			I gravitated towards CSS because I really love implementing challenging
+			designs in a clean and scalable manner. I've been on many projects throughout the years
+			and I keep noticing similar
+			bugs and errors. They get fixed but in a manner that I would term "band-aid." The developers fix it for
+			that particular use case, or for that particular page, or for that part of the application.
+			They fail to look at it more broadly to find a solution that will work for all cases. And that's one of
+			the reasons why I felt compelled to write this article; to help you identify the root of the problem.</p>
+
 		<h2>Step one: ask the question, "Do the CSS rules accommodate content growth or shrinkage?"</h2>
 
 		<p>While writing the CSS rules, keep in mind that the content will change. The length of the content will grow
@@ -106,7 +119,7 @@
 			absolute positioning; I could set the top and bottom offsets to
 			zero so that the customized shadow will grow and shrink with its container. Let's see
 			the code for the <a href="http://hoaboat.github.io/positionAbsolute.html" target="_blank">customized
-			shadow</a>. Go ahead and change the height of the container and watch the shadow adjust accordingly.
+			shadow</a>. Go ahead and change the height of the container and watch the shadow adjust seamlessly.
 			</p>
 
 		<h2>Steps two: ask the question, "Does the CSS rule accommodate changes in parents?"</h2>
@@ -153,23 +166,21 @@
 			to CSS than just changing border color, font size, or padding. It is one of only <em>three</em>
 			essential technologies for front-end development so please don't marginalize it. Unfortunately
 			though, I witness CSS being marginalized over and over again by development managers <em>and</em>
-			developers. How is CSS being marginalized? I'll give you five examples.</p>
+			developers.</p>
 
-		<ul>
-			<li>I'm on interview panels. When a candidate is not strong in CSS, members on the interview
-				panel brush off that fact by justifying the candidate can learn CSS on the job. Therefore
-				implying that CSS is so easy to understand and master.</li>
-			<li>I have personally been part of a conference that celebrates the awesomeness of
-				application development only to see CSS mentioned as an afterthought because it's not
-				technical enough.</li>
-			<li>I have seen management promote many JavaScript conferences, but they don't promote or care for
-				CSS conferences.</li>
-			<li>I know of application development managers who only care that their developers write good JavaScript.
-				They disregard the importance of CSS expertise and experience. That disregard for CSS does have
-				consequences though; when it takes over three months to upgrade their CSS framework.</li>
-			<li>I have seen candidates hired for JavaScript prowess only to discover later during code
-				reviews or pull request reviews committed code that look like Examples 4 and 5 below</li>
-		</ul>
+		<p>For instance, I'm on interview panels, and when a candidate is not strong in CSS, members on the interview
+		panel brush off that fact by justifying the candidate can learn CSS on the job. Thereby
+		implying that CSS is so easy to understand and master. I can tell you that it takes years to learn and master
+			CSS on the job because <em>I</em> have learned it on the job. Recently, because of my CSS
+			experience I've been asked to
+			teach a few CSS courses to the application developers at my company. I've also been asked to give
+			presentations about CSS to different teams. All of this has opened my eyes to how
+			difficult CSS is. I never really thought about how difficult CSS can be because I love what I do.
+			I challenge myself with CSS in my spare time because it doesn't feel like work to me. I love
+			accomplishing the designs the User Experience Designers give to me. Because it doesn't
+			feel like work to me I forget that there's a lot to remember and learn about CSS and expertise comes
+			with a lot of use and a ton of practice. These developers who have JavaScript prowess but are weak in CSS are easy to spot when it comes time for
+			code reviews or pull request reviews because I see code like Example 4 and 5 below:</p>
 
 		<p>Example 4:</p>
 
@@ -205,6 +216,16 @@
 			no separation of concerns here and all the JavaScript logic and extra HTML is completely unnecessary
 			if the developer had known more about the properties <code>float</code> and <code>display</code>.
 		</p>
+
+		<p>Having development managers who marginalize CSS feeds its marginalization. I know of application
+			development managers who only care that their developers write good JavaScript. They promote many
+			JavaScript conferences, but they don't promote or care for CSS conferences.
+			They disregard the importance of CSS expertise and experience. When development managers marginalize CSS,
+			they groom developers to not care about CSS. Which leads to poor
+			CSS quality, visual bugs, and a CSS maintenance nightmare. Case in point, I know a team that took over three
+			months to upgrade their CSS framework. Having taught developers about CSS and witnessing their confusion,
+			I'm appalled that development managers feel CSS is not as difficult or technical as other
+			technologies.</p>
 
 		<p>Please don't misunderstand me, I agree that CSS can be learned on the job; <em>anything</em> can be learned
 			on the job given enough time. But in order to be truly experienced with CSS, you must use it constantly.
