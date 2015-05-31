@@ -180,7 +180,7 @@
 			accomplishing the designs the User Experience Designers give to me. Because it doesn't
 			feel like work to me I forget that there's a lot to remember and learn about CSS and expertise comes
 			with a lot of use and a ton of practice. These developers who have JavaScript prowess but are weak in CSS are easy to spot when it comes time for
-			code reviews or pull request reviews because I see code like Example 4 and 5 below:</p>
+			code reviews or pull request reviews because I see code/pseudo-code like Example 4 and 5 below:</p>
 
 		<p>Example 4:</p>
 
@@ -192,16 +192,16 @@
 
 		<pre><code>
 	&lt;ul class="credit"&gt;
-		if (cards === 5) {
+		{@if cards === 5}
 			&lt;li&gt;&lt;a href="someUrl"&gt;card 1&lt;/a&gt; &lt;a href="someUrl"&gt;card 2&lt;/a&gt;&lt;/li&gt;
 			&lt;li&gt;&lt;a href="someUrl"&gt;card 3&lt;/a&gt; &lt;a href="someUrl"&gt;card 4&lt;/a&gt;&lt;/li&gt;
 			&lt;li&gt;&lt;a href="someUrl"&gt;card 5&lt;/a&gt;&lt;/li&gt;
-		} else if (cards < 5) {
+		{:else}
 			&lt;li&gt;&lt;a href="someUrl"&gt;card 1&lt;/a&gt;&lt;/li&gt;
 			&lt;li&gt;&lt;a href="someUrl"&gt;card 2&lt;/a&gt;&lt;/li&gt;
 			&lt;li&gt;&lt;a href="someUrl"&gt;card 3&lt;/a&gt;&lt;/li&gt;
 			&lt;li&gt;&lt;a href="someUrl"&gt;card 4&lt;/a&gt;&lt;/li&gt;
-		}
+		{/if}
 	&lt;/ul&gt;
 			</code></pre>
 
@@ -211,9 +211,10 @@
 			This is not scalable or maintainable.
 		</p>
 
-		<p>Example 5 indicates that the developer has little experience with CSS layout properties. Using JavaScript
+		<p>Example 5 indicates that the developer has little experience with CSS layout properties. Using templating
+			logic
 			they are changing the HTML so the cards can be laid out differently when the number exceeds four. There is
-			no separation of concerns here and all the JavaScript logic and extra HTML is completely unnecessary
+			no separation of concerns here and the logic and extra HTML is completely unnecessary
 			if the developer had known more about the properties <code>float</code> and <code>display</code>.
 		</p>
 
