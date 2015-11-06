@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Border radius</title>
+		
+		<meta charset="utf-8" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		
+		<style>
+			.container {
+				margin: 0 0 20px 200px;
+				width: 52px;
+				height: 100px;
+			}
+
+			.container1 {
+				border: 1px solid red;
+				border-color: transparent transparent red transparent;
+				border-radius: 100px/110px;
+			}
+
+			.container2 {
+				width: 19px;
+				height: 29px;
+				border: 1px solid blue;
+				border-color: transparent blue blue blue;
+				border-radius: 0 0 21px 18px/0 0 8px 15px;
+				-webkit-transform: rotate(15deg);
+			}
+
+			.container3 {
+				width: 18px;
+				height: 23px;
+				border: 1px solid purple;
+				border-color: purple purple purple transparent;
+				border-radius: 10px 8px 8px 10px/10px 7px 7px 10px;
+				-webkit-transform: rotate(-15deg);
+			}
+		</style>
+	</head>
+	
+	<body>
+		<h1>Border radius</h1>
+
+		<h2>Right nostril</h2>
+		<div class="container container3"></div>
+
+		<h2>Arc</h2>
+		<div class="container container1"></div>
+
+		<h2>Left nostril</h2>
+		<div class="container container2"></div>
+
+
+
+
+
+
+
+	</body>
+</html>
