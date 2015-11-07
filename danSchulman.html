@@ -33,9 +33,38 @@
 
 			.nose {
 				position: absolute;
-				top: 70px;
-				left: 70px;
+				top: 187px;
+				left: 121px;
 				margin: 0;
+				width: 11px;
+				height: 44px;
+				background: none;
+			}
+
+			.nose:before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 3px;
+				left: -4px;
+				margin: 0;
+				width: 1px;
+				height: 44px;
+				background: #cbcbcb;
+				transform: rotate(6deg);
+			}
+
+			.nose:after {
+				content: " ";
+				display: block;
+				position: absolute;
+				top: 3px;
+				left: 18px;
+				margin: 0;
+				width: 1px;
+				height: 44px;
+				background: #cbcbcb;
+				transform: rotate(-7deg);
 			}
 
 			.ears {
@@ -120,9 +149,9 @@
 			.leftEyeAlmond {
 				position: absolute;
 				top: 186px;
-				left: 77px;
+				left: 76px;
 				margin: 0;
-				height: 15px;
+				height: 10px;
 				width: 32px;
 
 			}
@@ -133,7 +162,7 @@
 				border: 3px solid white;
 				position: absolute;
 				top: -3px;
-				left: 7px;
+				left: 6px;
 				height: 21px;
 				width: 20px;
 				border-radius: 2000% 50%;
@@ -330,7 +359,7 @@
 
 			.mouth {
 				position: absolute;
-				top: 240px;
+				top: 242px;
 				left: 97px;
 				width: 68px;
 				height: 40px;
@@ -367,7 +396,7 @@
 
 			.mouthMask {
 				position: absolute;
-				top: 238px;
+				top: 240px;
 				left: 94px;
 				background: white;
 				width: 72px;
@@ -376,29 +405,29 @@
 
 			.leftOuterNostril {
 				position: absolute;
-				top: 229px;
+				top: 233px;
 				left: 107px;
-				width: 7px;
-				height: 17px;
+				width: 9px;
+				height: 12px;
 				border: 1px solid #cbcbcb;
-				border-color: transparent #cbcbcb #cbcbcb #cbcbcb;
-				border-radius: 0 0 10px 11px/0 0 8px 9px;
-				-webkit-transform: rotate(24deg);
+				border-color: #cbcbcb transparent #cbcbcb #cbcbcb;
+				border-radius: 17px 13px 13px 17px/20px 20px 20px 20px;
+				-webkit-transform: rotate(0deg);
 			}
 
 			/* mask */
-			.leftOuterNostril:before {
+			.xleftOuterNostril:before {
 				content: "";
 				position: absolute;
 				display: block;
-				top: -3px;
-				left: 5px;
+				top: -2px;
+				left: 7px;
 				width: 4px;
-				height: 19px;
+				height: 14px;
 				background: white;
 			}
 
-			.leftOuterNostril:after {
+			.xleftOuterNostril:after {
 				content: "";
 				position: absolute;
 				display: block;
@@ -413,7 +442,7 @@
 			.leftInnerNostril {
 				position: absolute;
 				top: 244px;
-				left: 111px;
+				left: 113px;
 				width: 3px;
 				height: 3px;
 				background: #999;
@@ -434,10 +463,10 @@
 
 			.rightOuterNostril {
 				position: absolute;
-				top: 232px;
-				left: 137px;
+				top: 231px;
+				left: 141px;
 				width: 11px;
-				height: 13px;
+				height: 14px;
 				border: 1px solid #cbcbcb;
 				border-color: #cbcbcb #cbcbcb #cbcbcb transparent;
 				border-radius: 10px 8px 8px 10px/10px 7px 7px 10px;
@@ -445,19 +474,19 @@
 			}
 
 			/* mask */
-			.rightOuterNostril:before {
+			.xrightOuterNostril:before {
 				content: "";
 				position: absolute;
 				display: block;
-				top: -1px;
-				left: 1px;
+				top: -2px;
+				left: -1px;
 				width: 4px;
-				height: 3px;
+				height: 4px;
 				background: white;
 			}
 
 			/* mask */
-			.rightOuterNostril:after {
+			.xrightOuterNostril:after {
 				content: "";
 				position: absolute;
 				display: block;
@@ -470,8 +499,8 @@
 
 			.rightInnerNostril {
 				position: absolute;
-				top: 242px;
-				left: 134px;
+				top: 243px;
+				left: 137px;
 				width: 8px;
 				height: 4px;
 				background: #999;
@@ -495,53 +524,55 @@
 			.noseTip {
 				position: absolute;
 				top: 233px;
-				left: 116px;
-				width: 19px;
+				left: 118px;
+				width: 21px;
 				height: 19px;
 				border: 1px solid #cbcbcb;
 				border-color: transparent transparent #cbcbcb transparent;
 				border-radius: 18px;
-				-webkit-transform: rotate(-9deg);
+				-webkit-transform: rotate(-2deg);
 			}
 
-			.xsmileLines {
+			/* Left smile line */
+			.smileLines {
 				position: absolute;
-				top: 239px;
-				left: 138px;
-				width: 34px;
-				height: 19px;
-				background: none;
-				transform: rotate(35deg);
-				border: 2px solid #e0e0e0;
-				border-color: #e0e0e0 #e0e0e0 transparent transparent;
-				border-radius: 0px 35px 32px 0px/0px 22px 25px 0px;
-			}
-
-			.xsmileLines:before {
-				content: "";
-				position: absolute;
-				display: block;
-				z-index: -1;
-				top: 33px;
-				left: -52px;
-				width: 30px;
-				height: 8px;
-				background: #e8e8e8;
-				transform: rotate(-70deg) skew(-60deg);
-				border-radius: 0px 0px 0px 9px/0px 0px 0px 20px;
-			}
-
-			.xsmileLines:after {
-				content: "";
-				position: absolute;
-				display: block;
-				top: 36px;
-				left: -52px;
-				width: 26px;
+				top: 248px;
+				left: 79px;
+				width: 33px;
 				height: 6px;
-				background: #ccc;
-				transform: rotate(-84deg);
-				border-radius: 13px 13px 0px 0px/7px 7px 0px 0px;
+				background: none;
+				transform: rotate(-46deg);
+				border: 1px solid #e0e0e0;
+				border-color: transparent transparent transparent #e0e0e0;
+				border-radius: 30px 0px 0px 0px/13px 0px 0px 0px;
+
+			}
+
+			.smileLines:before {
+				content: "";
+				position: absolute;
+				display: block;
+				top: 47px;
+				left: 49px;
+				width: 34px;
+				height: 11px;
+				background: none;
+				transform: rotate(-100deg);
+				border: 1px solid #e0e0e0;
+				border-color: transparent transparent transparent #e0e0e0;
+				border-radius: 0px 0px 0px 31px/0px 0px 0px 18px;
+			}
+
+			.smileLines:after {
+				content: "";
+				position: absolute;
+				display: block;
+				top: 60px;
+				left: -2px;
+				width: 26px;
+				height: 1px;
+				background: #e0e0e0;
+				transform: rotate(46deg);
 			}
 
 			.hair {
