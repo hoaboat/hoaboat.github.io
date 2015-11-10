@@ -266,10 +266,12 @@
 			.leftEyebrow {
 				position: absolute;
 				top: 187px;
-				left: 86px;
-				width: 15px;
-				height: 5px;
-				background: none;
+				left: 72px;
+				width: 41px;
+				height: 41px;
+				border: 1px solid gray;
+				border-color: gray transparent transparent transparent;
+				border-radius: 100%;
 			}
 
 			.leftEyebrow:before {
@@ -277,7 +279,7 @@
 				display: block;
 				position: absolute;
 				top: -10px;
-				left: -9px;
+				left: 4px;
 				width: 32px;
 				height: 8px;
 				margin: 0;
@@ -292,7 +294,7 @@
 				display: block;
 				position: absolute;
 				top: -10px;
-				left: -13px;
+				left: 0px;
 				border-style: solid;
 				border-color: transparent transparent transparent #999;
 				border-width: 6px 1px 12px 6px;
@@ -310,41 +312,44 @@
 				background: -webkit-radial-gradient(15px 8px, ellipse farthest-side, transparent 11px, #999 5px);
 			}
 
-			/* Don't skew the parent, skew the pseudo element */
 			.rightEyebrow {
 				position: absolute;
-				top: 184px;
-				left: 149px;
-				width: 38px;
-				height: 10px;
+				top: 186px;
+				left: 151px;
+				width: 30px;
+				height: 13px;
 				background: none;
+				border: 1px solid gray;
+				border-color: gray transparent transparent gray;
+				border-radius: 15px 12px 0 0/13px 3px 0 0;
+				transform: rotate(20deg);
 			}
 
 			.rightEyebrow:before {
 				content: "";
 				display: block;
 				position: absolute;
-				top: -9px;
-				left: -7px;
+				top: -10px;
+				left: -11px;
 				width: 35px;
-				height: 6px;
+				height: 7px;
 				margin: 0;
 				background: #999;
 				border-radius: 16px 16px 0 0/1px 2px 0 0;
-				transform: skew(51deg) rotate(-5deg);
+				transform: skew(0deg) rotate(-20deg);
 			}
 
 			.rightEyebrow:after {
 				content: "";
 				display: block;
 				position: absolute;
-				top: -9px;
-				left: 19px;
+				top: -16px;
+				left: 12px;
 				border-style: solid;
 				border-color: #999 #999 transparent transparent;
-				border-width: 6px 22px 6px 0px;
+				border-width: 7px 22px 6px 0px;
 				border-radius: 1px 1px 1px 1px/2px 2px 2px 2px;
-				-webkit-transform: rotate(3deg);
+				-webkit-transform: rotate(-21deg);
 			}
 
 			.vrightEyebrowBottom {
