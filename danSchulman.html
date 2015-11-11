@@ -31,6 +31,59 @@
 				background: white;
 			}
 
+			.rightEarLines {
+				position: absolute;
+				display: block;
+				top: 88px;
+				left: 161px;
+				width: 24px;
+				height: 42px;
+				border: 1px solid black;
+				border-color: transparent black transparent transparent;
+				border-radius: 100%;
+			}
+
+			.rightEarLines:before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 36px;
+				left: 15px;
+				width: 4px;
+				height: 13px;
+				border: 1px solid black;
+				border-color: transparent transparent transparent black;
+				border-radius: 100%;
+				transform: rotate(30deg);
+			}
+
+			/* Ear shadow */
+			.rightEarLines:after {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 32px;
+				left: 6px;
+				width: 7px;
+				height: 11px;
+				background: gray;
+				border-radius: 100% 100% 100% 100%/100% 100% 100% 100%;
+				transform: rotate(24deg);
+				z-index: -1;
+			}
+
+			.rightEarShadow {
+				display: block;
+				position: absolute;
+				top: 109px;
+				left: 172px;
+				width: 7px;
+				height: 11px;
+				background: red;
+				border-radius: 100% 100% 100% 100%/100% 100% 100% 100%;
+				transform: rotate(24deg);
+			}
+
 			.nose {
 				position: absolute;
 				top: 187px;
@@ -740,7 +793,7 @@
 		<div class="dSchulman">
 			<h1 class="ears">Dan Schulman</h1>
 
-			<p class="face">Daniel H. "Dan" Schulman (born January 19, 1958) is an American business executive. He is President and CEO of PayPal and Chairman of Symantec, formerly serving as Group President of Enterprise Growth at American Express. The former President of Sprint's Prepaid Group and the founding CEO of Virgin Mobile, Schulman was responsible for American Express' global strategy to expand alternative mobile and online payment services, form new partnerships, and build revenue streams beyond the traditional card and travel businesses.[2]</p>
+			<p class="face">Daniel H. "Dan" Schulman (born January 19, 1958) is an American business executive. He is <span class="rightEarLines">President and CEO of PayPal</span> and <span class="rightEarShadow">Chairman of Symantec</span>, formerly serving as Group President of Enterprise Growth at American Express. The former President of Sprint's Prepaid Group and the founding CEO of Virgin Mobile, Schulman was responsible for American Express' global strategy to expand alternative mobile and online payment services, form new partnerships, and build revenue streams beyond the traditional card and travel businesses.[2]</p>
 
 			<h2 class="nose">Early life</h2>
 
