@@ -364,7 +364,7 @@
 				width: 35px;
 				height: 8px;
 				margin: 0;
-				background: #999;
+				background: #ccc;
 				border-radius: 9px 3px 2px 0/3px 2px 2px 0;
 				transform: skew(22deg);
 			}
@@ -376,7 +376,7 @@
 				top: -10px;
 				left: 0px;
 				border-style: solid;
-				border-color: transparent transparent transparent #999;
+				border-color: transparent transparent transparent #ccc;
 				border-width: 6px 1px 12px 6px;
 				border-radius: 33px 5px 5px 37px/33px 5px 5px 55px;
 				-webkit-transform: rotate(20deg);
@@ -448,7 +448,7 @@
 				width: 35px;
 				height: 8px;
 				margin: 0;
-				background: #999;
+				background: #ccc;
 				border-radius: 43px 10px 0 21px/23px 2px 0 6px;
 				transform: skew(0deg) rotate(-20deg);
 			}
@@ -460,7 +460,7 @@
 				top: -16px;
 				left: 12px;
 				border-style: solid;
-				border-color: #999 #999 transparent transparent;
+				border-color: #ccc #ccc transparent transparent;
 				border-width: 7px 22px 6px 0px;
 				border-radius: 1px 8px 1px 1px/2px 5px 2px 2px;
 				-webkit-transform: rotate(-17deg);
@@ -755,7 +755,7 @@
 				margin: 0;
 				top: 44px;
 				left: 48px;
-				width: 204px;
+				width: 202px;
 				height: 55px;
 				background: #180f14;
 				border-radius: 292px 292px 0px 0px/168px 168px 0px 0px;
@@ -779,7 +779,7 @@
 				position: absolute;
 				top: 53px;
 				left: 159px;
-				width: 45px;
+				width: 43px;
 				height: 86px;
 				background: #110d12;
 				border-radius: 0px 0px 0px 0px/0px 0px 0px 61px;
@@ -817,6 +817,117 @@
 				background: radial-gradient(ellipse farthest-corner at -6px 19px, white 0%, white 63%, transparent 63%, transparent 100%);
 			}
 
+			.rightHair {
+				position: absolute;
+				top: 79px;
+				left: 150px;
+				width: 47px;
+				height: 22px;
+				background: #110d12;
+				transform: rotate(-23deg);
+				z-index: 2;
+				border-radius: 5px 2px 35px 17px/19px 2px 23px 4px;
+			}
+
+			.rightHair:before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: -39px;
+				left: -1px;
+				width: 26px;
+				height: 33px;
+				border-radius: 100%;
+				background: #110d12;
+				transform: rotate(22deg);
+			}
+
+			.rightHair:after {
+				content: "";
+				display: block;
+				position: absolute;
+				top: -31px;
+				left: 38px;
+				width: 16px;
+				height: 24px;
+				border-radius: 100%;
+				background: #110d12;
+				transform: rotate(22deg);
+			}
+
+			.rightHairTopBumps {
+				position: absolute;
+				top: -50px;
+				left: 98px;
+				width: 53px;
+				height: 28px;
+				border-radius: 100%;
+				background: #110d12;
+				transform: rotate(11deg);
+			}
+
+			.rightHairTopBumps:before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 5px;
+				left: 25px;
+				width: 51px;
+				height: 33px;
+				border-radius: 100%;
+				background: #110d12;
+				transform: rotate(0deg);
+			}
+
+			.rightHairTopBumps:after {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 85px;
+				left: 83px;
+				width: 26px;
+				height: 33px;
+				border-radius: 100%;
+				background: #110d12;
+			}
+
+			.leftHairBumps {
+				position: absolute;
+				top: -50px;
+				left: -8px;
+				width: 53px;
+				height: 28px;
+				border-radius: 100%;
+				background: red;
+				transform: rotate(11deg);
+			}
+
+			.leftHairBumps:before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 106px;
+				left: -37px;
+				width: 53px;
+				height: 28px;
+				border-radius: 100%;
+				background: orange;
+				transform: rotate(11deg);
+			}
+
+			.leftHairBumps:after {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 152px;
+				left: -9px;
+				width: 53px;
+				height: 28px;
+				border-radius: 100%;
+				background: green;
+				transform: rotate(11deg);
+			}
+
 			body {
 				margin: 0;
 			}
@@ -852,7 +963,7 @@
 		<div class="dSchulman">
 			<h1 class="ears">Dan Schulman</h1>
 
-			<p class="face">Daniel H. "Dan" Schulman (<span class="hairCurve">born January 19, 1958</span>) is an American business executive. He is <span class="rightEarLines">President and CEO of PayPal</span> and <span class="rightEarShadow">Chairman of Symantec</span>, formerly serving as Group President of Enterprise Growth at American Express. The former President of Sprint's Prepaid Group and the founding CEO of Virgin Mobile, Schulman was responsible for American Express' global strategy to expand alternative mobile and online payment services, form new partnerships, and build revenue streams beyond the traditional card and travel businesses.[2]</p>
+			<p class="face">Daniel H. "Dan" Schulman (<span class="hairCurve">born January 19, 1958</span>) is an American business executive. He is <span class="rightEarLines">President and CEO of PayPal</span> and <span class="rightEarShadow">Chairman of Symantec</span>, formerly serving as <span class="rightHair">Group President of Enterprise Growth at American Express</span>. The former <span class="rightHairTopBumps">President of Sprint's Prepaid Group</span> and the founding <span class="leftHairBumps">CEO of Virgin Mobile</span>, Schulman was responsible for American Express' global strategy to expand alternative mobile and online payment services, form new partnerships, and build revenue streams beyond the traditional card and travel businesses.[2]</p>
 
 			<h2 class="nose">Early life</h2>
 
