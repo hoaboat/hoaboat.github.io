@@ -811,10 +811,10 @@
 				position: absolute;
 				z-index: 1;
 				top: 73px;
-				left: 145px;
-				width: 9px;
+				left: 144px;
+				width: 10px;
 				height: 18px;
-				background: radial-gradient(ellipse farthest-corner at -6px 19px, white 0%, white 63%, transparent 63%, transparent 100%);
+				background: radial-gradient(ellipse farthest-corner at -6px 19px, white 0%, white 65%, transparent 65%, transparent 100%);
 				transform: rotate(2deg);
 			}
 
@@ -901,7 +901,7 @@
 				border-radius: 100%;
 				background: #110d12;
 				transform: rotate(-30deg);
-				z-index: 10;
+				z-index: 2;
 			}
 
 			.leftHairBumps:before {
@@ -925,19 +925,43 @@
 				left: -85px;
 				width: 17px;
 				height: 63px;
-				border-radius: 0px 0px 0px 11px/0px 0px 0px 10px;
+				border-radius: 0px 3px 0px 11px/0px 5px 0px 10px;
 				background: #110d12;
 				transform: rotate(37deg);
 			}
 
 			.hairLeftEar {
 				position: absolute;
-				top: 101px;
-				left: -9px;
+				top: 100px;
+				left: -13px;
 				width: 13px;
 				height: 12px;
-				background: radial-gradient(ellipse farthest-corner at -9px 22px, transparent 0%, transparent 77%, blue 77%, blue 100%);
-				z-index: 150;
+				background: radial-gradient(ellipse farthest-corner at -9px 22px, transparent 0%, transparent 77%, #110d12 77%, #110d12 100%);
+				z-index: 2;
+				transform: rotate(5deg);
+			}
+
+			.hairLeftEar:before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: -61px;
+				left: 13px;
+				width: 5px;
+				height: 64px;
+				background: white;
+			}
+
+			.hairLeftEar:after {
+				content: "";
+				display: block;
+				position: absolute;
+				top: -65px;
+				left: 12px;
+				width: 5px;
+				height: 49px;
+				background: white;
+				transform: rotate(-3deg);
 			}
 
 			body {
