@@ -31,6 +31,30 @@
 				background: white;
 			}
 
+			.xleftOuterNostril:before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				background: radial-gradient(ellipse farthest-side at 45px 135px, #00FFFF 0%, #00FFFF 75%, red 75%, red 100%);
+			}
+
+			/* Face shadow */
+			.face:after {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				border-radius: 16% 32% 69% 48%/16% 32% 55% 52%;
+				background: radial-gradient(ellipse farthest-side at 42px 133px, #00FFFF 0%, #00FFFF 75%, red 75%, red 100%);
+			}
+
 			.rightEarLines {
 				position: absolute;
 				display: block;
@@ -364,7 +388,7 @@
 				width: 38px;
 				height: 7px;
 				margin: 0;
-				background: #bd8561;
+				background: #afafaf;
 				border-radius: 19px 25px 2px 0/12px 11px 2px 0;
 			}
 
@@ -378,7 +402,7 @@
 				height: 15px;
 				-webkit-transform: rotate(6deg);
 				border-radius: 7px 0 0 0/13px 0 0 0;
-				background: radial-gradient(circle farthest-corner at 24px 34px, transparent 0%, transparent 73%, #bd8561 73%, #bd8561 100%);
+				background: radial-gradient(circle farthest-corner at 24px 34px, transparent 0%, transparent 73%, #afafaf 73%, #afafaf 100%);
 			}
 
 			.leftEyeLines {
@@ -442,26 +466,28 @@
 				content: "";
 				display: block;
 				position: absolute;
-				top: -10px;
-				left: -1px;
+				top: -9px;
+				left: -15px;
 				width: 38px;
 				height: 7px;
 				margin: 0;
-				background: #bd8561;
-				border-radius: 19px 25px 2px 0/12px 11px 2px 0;
+				background: #afafaf;
+				border-radius: 25px 19px 0 2px/11px 12px 0 2px;
+				transform: rotate(-20deg);
 			}
 
 			.rightEyebrow:after {
 				content: "";
 				display: block;
 				position: absolute;
-				top: -9px;
-				left: -3px;
-				width: 15px;
-				height: 15px;
+				top: -16px;
+				left: 15px;
+				width: 21px;
+				height: 23px;
 				-webkit-transform: rotate(6deg);
-				border-radius: 7px 0 0 0/13px 0 0 0;
-				background: radial-gradient(circle farthest-corner at 24px 34px, transparent 0%, transparent 73%, #bd8561 73%, #bd8561 100%);
+				border-radius: 0 14px 0 0/0 13px 0 0;
+				background: radial-gradient(circle farthest-corner at -5px 40px, transparent 0%, transparent 71%, #afafaf 71%, #afafaf 100%);
+				transform: rotate(-20deg);
 			}
 
 			.rightEyeLines {
@@ -968,9 +994,9 @@
 
 			.cartoon {
 				margin-top: -337px;
-				/*background: url('images/danSchulman.png') no-repeat top left;*/
+
 				background: url('images/danSchulman.jpg') no-repeat top left;
-				/*background-size: 300px;*/
+
 				background-size: 235px;
 				background-position: 34px -7px;
 				width: 300px;
@@ -988,6 +1014,13 @@
 				position: absolute;
 				top: 33px;
 				left: 260px;
+			}
+
+			.cartoon3 {
+				width: 300px;
+				height: 300px;
+				background: url('images/danSchulman.png') no-repeat top left;
+				background-size: 300px;
 			}
 
 		</style>
@@ -1033,5 +1066,6 @@
 		</div>
 		<div class="cartoon"></div>
 		<div class="cartoon2"></div>
+		<div class="cartoon3"></div>
 	</body>
 </html>
