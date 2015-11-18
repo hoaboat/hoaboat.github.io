@@ -31,19 +31,20 @@
 				background: white;
 			}
 
-			.xleftOuterNostril:before {
+			/* Face shadow */
+			.face:after {
 				content: "";
 				display: block;
 				position: absolute;
 				top: 0;
-				left: 0;
-				bottom: 0;
-				right: 0;
-				background: radial-gradient(ellipse farthest-side at 45px 135px, #00FFFF 0%, #00FFFF 75%, red 75%, red 100%);
+				left: -1px;
+				width: 135px;
+				height: 76px;
+				background: linear-gradient(48deg, white 59%, #e8e8e8 59%, #e8e8e8 100%);
 			}
 
 			/* Face shadow */
-			.face:after {
+			.face:before {
 				content: "";
 				display: block;
 				position: absolute;
@@ -52,7 +53,45 @@
 				bottom: 0;
 				right: 0;
 				border-radius: 16% 32% 69% 48%/16% 32% 55% 52%;
-				background: radial-gradient(ellipse farthest-side at 42px 133px, #00FFFF 0%, #00FFFF 75%, red 75%, red 100%);
+				background: radial-gradient(ellipse farthest-side at 53px 135px, transparent 0%, transparent 72%, #e8e8e8 72%, #e8e8e8 100%);
+			}
+
+			.cheekShadow {
+				position: absolute;
+				z-index: 3;
+				top: 116px;
+				left: 117px;
+				width: 41px;
+				height: 50px;
+				background: #e8e8e8;
+				border-radius: 100%;
+			}
+
+			.cheekShadow:before {
+				content: "";
+				display: block;
+				position: absolute;
+				z-index: 3;
+				top: -7px;
+				left: 11px;
+				width: 12px;
+				height: 12px;
+				background: radial-gradient(16px at 0 0 , white 0%, white 46%, #e8e8e8 46%, #e8e8e8 100%);
+				transform: rotate(-20deg);
+			}
+
+			.cheekShadow:after {
+				content: "";
+				display: block;
+				position: absolute;
+				z-index: 3;
+				top: 43px;
+				left: 2px;
+				width: 18px;
+				height: 18px;
+				background: radial-gradient(15px at 0 0 , white 0%, white 92%, #e8e8e8 92%, #e8e8e8 100%);
+				transform: rotate(-57deg);
+				border-radius: 7px 0 0 0;
 			}
 
 			.rightEarLines {
@@ -451,6 +490,7 @@
 
 			.rightEyebrow {
 				position: absolute;
+				z-index: 3;
 				top: 186px;
 				left: 151px;
 				width: 30px;
@@ -741,8 +781,8 @@
 				height: 6px;
 				background: none;
 				transform: rotate(-46deg);
-				border: 1px solid #e0e0e0;
-				border-color: transparent transparent transparent #e0e0e0;
+				border: 1px solid #cbcbcb;
+				border-color: transparent transparent transparent #cbcbcb;
 				border-radius: 30px 0px 0px 0px/13px 0px 0px 0px;
 
 			}
@@ -757,8 +797,8 @@
 				height: 11px;
 				background: none;
 				transform: rotate(-100deg);
-				border: 1px solid #e0e0e0;
-				border-color: transparent transparent transparent #e0e0e0;
+				border: 1px solid #cbcbcb;
+				border-color: transparent transparent transparent #cbcbcb;
 				border-radius: 0px 0px 0px 31px/0px 0px 0px 18px;
 			}
 
@@ -811,6 +851,7 @@
 
 			.hairCurve {
 				position: absolute;
+				z-index: 3;
 				top: 1px;
 				left: -2px;
 				width: 36px;
@@ -838,7 +879,7 @@
 				left: 144px;
 				width: 10px;
 				height: 18px;
-				background: radial-gradient(ellipse farthest-corner at -6px 19px, white 0%, white 65%, transparent 65%, transparent 100%);
+				background: radial-gradient(ellipse farthest-corner at -6px 19px, #e8e8e8 0%, #e8e8e8 65%, transparent 65%, transparent 100%);
 				transform: rotate(2deg);
 			}
 
@@ -1030,7 +1071,7 @@
 		<div class="dSchulman">
 			<h1 class="ears">Dan Schulman</h1>
 
-			<p class="face"><span class="hairLeftEar">Daniel H. "Dan" Schulman</span> (<span class="hairCurve">born January 19, 1958</span>) is an American business executive. He is <span class="rightEarLines">President and CEO of PayPal</span> and <span class="rightEarShadow">Chairman of Symantec</span>, formerly serving as <span class="rightHair">Group President of Enterprise Growth at American Express</span>. The former <span class="rightHairTopBumps">President of Sprint's Prepaid Group</span> and the founding <span class="leftHairBumps">CEO of Virgin Mobile</span>, Schulman was responsible for American Express' global strategy to expand alternative mobile and online payment services, form new partnerships, and build revenue streams beyond the traditional card and travel businesses.[2]</p>
+			<p class="face"><span class="hairLeftEar">Daniel H. "Dan" Schulman</span> (<span class="hairCurve">born January 19, 1958</span>) is an American business executive. He is <span class="rightEarLines">President and CEO of PayPal</span> and <span class="rightEarShadow">Chairman of Symantec</span>, formerly serving as <span class="rightHair">Group President of Enterprise Growth at American Express</span>. The former <span class="rightHairTopBumps">President of Sprint's Prepaid Group</span> and the founding <span class="leftHairBumps">CEO of Virgin Mobile</span>, Schulman was responsible for <span class="cheekShadow">American Express</span>' global strategy to expand alternative mobile and online payment services, form new partnerships, and build revenue streams beyond the traditional card and travel businesses.[2]</p>
 
 			<h2 class="nose">Early life</h2>
 
