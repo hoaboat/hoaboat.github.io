@@ -10,20 +10,19 @@
 		<style>
 			* {
 				margin: 0;
+				color: transparent;
 			}
 
 			.dSchulman {
 				position: relative;
 				width: 300px;
 				height: 370px;
-				color: transparent;
 			}
 
 			.face {
 				position: absolute;
 				top: 92px;
 				left: 63px;
-				margin: 0;
 				border: 1px solid black;
 				width: 168px;
 				height: 235px;
@@ -40,6 +39,10 @@
 				left: -1px;
 				width: 135px;
 				height: 76px;
+				background: -webkit-linear-gradient(48deg, white 59%, #e8e8e8 59%, #e8e8e8 100%);
+				background: -moz-linear-gradient(48deg, white 59%, #e8e8e8 59%, #e8e8e8 100%);
+				background: -ms-linear-gradient(48deg, white 59%, #e8e8e8 59%, #e8e8e8 100%);
+				background: -o-linear-gradient(48deg, white 59%, #e8e8e8 59%, #e8e8e8 100%);
 				background: linear-gradient(48deg, white 59%, #e8e8e8 59%, #e8e8e8 100%);
 			}
 
@@ -53,6 +56,10 @@
 				bottom: 0;
 				right: 0;
 				border-radius: 16% 32% 69% 48%/16% 32% 55% 52%;
+				background: -webkit-radial-gradient(ellipse farthest-side at 53px 135px, transparent 0%, transparent 72%, #e8e8e8 72%, #e8e8e8 100%);
+				background: -moz-radial-gradient(ellipse farthest-side at 53px 135px, transparent 0%, transparent 72%, #e8e8e8 72%, #e8e8e8 100%);
+				background: -ms-radial-gradient(ellipse farthest-side at 53px 135px, transparent 0%, transparent 72%, #e8e8e8 72%, #e8e8e8 100%);
+				background: -o-radial-gradient(ellipse farthest-side at 53px 135px, transparent 0%, transparent 72%, #e8e8e8 72%, #e8e8e8 100%);
 				background: radial-gradient(ellipse farthest-side at 53px 135px, transparent 0%, transparent 72%, #e8e8e8 72%, #e8e8e8 100%);
 			}
 
@@ -76,7 +83,15 @@
 				left: 11px;
 				width: 12px;
 				height: 12px;
+				background: -webkit-radial-gradient(16px at 0 0 , white 0%, white 46%, #e8e8e8 46%, #e8e8e8 100%);
+				background: -moz-radial-gradient(16px at 0 0 , white 0%, white 46%, #e8e8e8 46%, #e8e8e8 100%);
+				background: -ms-radial-gradient(16px at 0 0 , white 0%, white 46%, #e8e8e8 46%, #e8e8e8 100%);
+				background: -o-radial-gradient(16px at 0 0 , white 0%, white 46%, #e8e8e8 46%, #e8e8e8 100%);
 				background: radial-gradient(16px at 0 0 , white 0%, white 46%, #e8e8e8 46%, #e8e8e8 100%);
+				-webkit-transform: rotate(-20deg);
+				-moz-transform: rotate(-20deg);
+				-ms-transform: rotate(-20deg);
+				-o-transform: rotate(-20deg);
 				transform: rotate(-20deg);
 			}
 
@@ -89,9 +104,17 @@
 				left: 2px;
 				width: 18px;
 				height: 18px;
-				background: radial-gradient(15px at 0 0 , white 0%, white 92%, #e8e8e8 92%, #e8e8e8 100%);
-				transform: rotate(-57deg);
 				border-radius: 7px 0 0 0;
+				background: -webkit-radial-gradient(15px at 0 0 , white 0%, white 92%, #e8e8e8 92%, #e8e8e8 100%);
+				background: -moz-radial-gradient(15px at 0 0 , white 0%, white 92%, #e8e8e8 92%, #e8e8e8 100%);
+				background: -ms-radial-gradient(15px at 0 0 , white 0%, white 92%, #e8e8e8 92%, #e8e8e8 100%);
+				background: -o-radial-gradient(15px at 0 0 , white 0%, white 92%, #e8e8e8 92%, #e8e8e8 100%);
+				background: radial-gradient(15px at 0 0 , white 0%, white 92%, #e8e8e8 92%, #e8e8e8 100%);
+				-webkit-transform: rotate(-57deg);
+				-moz-transform: rotate(-57deg);
+				-ms-transform: rotate(-57deg);
+				-o-transform: rotate(-57deg);
+				transform: rotate(-57deg);
 			}
 
 			.rightEarLines {
@@ -117,6 +140,10 @@
 				border: 1px solid black;
 				border-color: transparent transparent transparent black;
 				border-radius: 100%;
+				-webkit-transform: rotate(30deg);
+				-moz-transform: rotate(30deg);
+				-ms-transform: rotate(30deg);
+				-o-transform: rotate(30deg);
 				transform: rotate(30deg);
 			}
 
@@ -125,27 +152,35 @@
 				content: "";
 				display: block;
 				position: absolute;
+				z-index: -1;
 				top: 32px;
 				left: 6px;
 				width: 7px;
 				height: 11px;
 				background: #3C3536;
 				border-radius: 100%;
+				-webkit-transform: rotate(24deg);
+				-moz-transform: rotate(24deg);
+				-ms-transform: rotate(24deg);
+				-o-transform: rotate(24deg);
 				transform: rotate(24deg);
-				z-index: -1;
 			}
 
 			.rightEarShadow {
 				display: block;
 				position: absolute;
+				z-index: -1;
 				top: 99px;
 				left: 166px;
 				width: 16px;
 				height: 28px;
 				background: #3C3536;
 				border-radius: 100%;
+				-webkit-transform: rotate(-1deg);
+				-moz-transform: rotate(-1deg);
+				-ms-transform: rotate(-1deg);
+				-o-transform: rotate(-1deg);
 				transform: rotate(-1deg);
-				z-index: -1;
 			}
 
 			/* Hair */
@@ -172,6 +207,10 @@
 				height: 15px;
 				border-radius: 100%;
 				background: #180f14;
+				-webkit-transform: rotate(-10deg);
+				-moz-transform: rotate(-10deg);
+				-ms-transform: rotate(-10deg);
+				-o-transform: rotate(-10deg);
 				transform: rotate(-10deg);
 			}
 
@@ -179,7 +218,6 @@
 				position: absolute;
 				top: 187px;
 				left: 121px;
-				margin: 0;
 				width: 11px;
 				height: 44px;
 				background: none;
@@ -191,37 +229,42 @@
 				position: absolute;
 				top: 3px;
 				left: -4px;
-				margin: 0;
 				width: 1px;
 				height: 44px;
 				background: #cbcbcb;
+				-webkit-transform: rotate(6deg);
+				-moz-transform: rotate(6deg);
+				-ms-transform: rotate(6deg);
+				-o-transform: rotate(6deg);
 				transform: rotate(6deg);
 			}
 
 			.nose:after {
-				content: " ";
+				content: "";
 				display: block;
 				position: absolute;
 				top: 3px;
 				left: 18px;
-				margin: 0;
 				width: 1px;
 				height: 44px;
 				background: #cbcbcb;
+				-webkit-transform: rotate(-7deg);
+				-moz-transform: rotate(-7deg);
+				-ms-transform: rotate(-7deg);
+				-o-transform: rotate(-7deg);
 				transform: rotate(-7deg);
 			}
 
 			.ears {
 				position: absolute;
-				top: 186px;
 				z-index: -1;
-				margin: 0;
+				top: 186px;
 				width: 300px;
 			}
 
 			/* Left ear */
 			.ears:before {
-				content: " ";
+				content: "";
 				display: block;
 				position: absolute;
 				top: -3px;
@@ -234,7 +277,7 @@
 
 			/* Right ear */
 			.ears:after {
-				content: " ";
+				content: "";
 				display: block;
 				position: absolute;
 				top: -7px;
@@ -258,25 +301,25 @@
 			.leftEye:before {
 				content: "";
 				display: block;
+				position: absolute;
+				top: 4px;
+				left: 4px;
 				width: 4px;
 				height: 4px;
 				border-radius: 4px;
 				background: #4c4c4c;
-				position: absolute;
-				top: 4px;
-				left: 4px;
 			}
 
 			.leftEye:after {
 				content: "";
 				display: block;
+				position: absolute;
+				top: 4px;
+				left: 2px;
 				width: 2px;
 				height: 2px;
 				border-radius: 2px;
 				background: #fcfcfc;
-				position: absolute;
-				top: 4px;
-				left: 2px;
 			}
 
 			.leftEyeSparkle {
@@ -294,36 +337,42 @@
 				position: absolute;
 				top: 186px;
 				left: 76px;
-				margin: 0;
 				height: 10px;
 				width: 32px;
-
 			}
 
 			.leftEyeAlmond:before {
 				content: "";
 				display: block;
-				border: 3px solid white;
 				position: absolute;
 				top: -3px;
 				left: 6px;
 				height: 21px;
 				width: 20px;
+				border: 3px solid white;
 				border-radius: 2000% 50%;
 				-webkit-transform: rotate(53deg);
+				-moz-transform: rotate(53deg);
+				-ms-transform: rotate(53deg);
+				-o-transform: rotate(53deg);
+				transform: rotate(53deg);
 			}
 
 			.leftEyeAlmond:after {
 				content: "";
 				display: block;
-				border: 1px solid black;
 				position: absolute;
 				top: 1px;
 				left: 10px;
 				height: 17px;
 				width: 17px;
+				border: 1px solid black;
 				border-radius: 2000% 50%;
 				-webkit-transform: rotate(51deg);
+				-moz-transform: rotate(51deg);
+				-ms-transform: rotate(51deg);
+				-o-transform: rotate(51deg);
+				transform: rotate(51deg);
 			}
 
 			.rightEye {
@@ -339,25 +388,25 @@
 			.rightEye:before {
 				content: "";
 				display: block;
+				position: absolute;
+				top: 4px;
+				left: 5px;
 				width: 4px;
 				height: 4px;
 				border-radius: 4px;
 				background: #4c4c4c;
-				position: absolute;
-				top: 4px;
-				left: 5px;
 			}
 
 			.rightEye:after {
 				content: "";
 				display: block;
+				position: absolute;
+				top: 4px;
+				left: 3px;
 				width: 2px;
 				height: 2px;
 				border-radius: 2px;
 				background: #fcfcfc;
-				position: absolute;
-				top: 4px;
-				left: 3px;
 			}
 
 			.rightEyeSparkle {
@@ -375,7 +424,6 @@
 				position: absolute;
 				top: 183px;
 				left: 149px;
-				margin: 0;
 				height: 16px;
 				width: 35px;
 			}
@@ -383,27 +431,35 @@
 			.rightEyeAlmond:before {
 				content: "";
 				display: block;
-				border: 3px solid white;
 				position: absolute;
 				top: -2px;
 				left: 5px;
 				height: 21px;
 				width: 20px;
+				border: 3px solid white;
 				border-radius: 2000% 50%;
 				-webkit-transform: rotate(39deg);
+				-moz-transform: rotate(39deg);
+				-ms-transform: rotate(39deg);
+				-o-transform: rotate(39deg);
+				transform: rotate(39deg);
 			}
 
 			.rightEyeAlmond:after {
 				content: "";
 				display: block;
-				border: 1px solid black;
 				position: absolute;
 				top: 2px;
 				left: 8px;
 				height: 17px;
 				width: 17px;
+				border: 1px solid black;
 				border-radius: 2000% 50%;
 				-webkit-transform: rotate(37deg);
+				-moz-transform: rotate(37deg);
+				-ms-transform: rotate(37deg);
+				-o-transform: rotate(37deg);
+				transform: rotate(37deg);
 			}
 
 			/* For eye lid crease */
@@ -426,7 +482,6 @@
 				left: -1px;
 				width: 38px;
 				height: 7px;
-				margin: 0;
 				background: #afafaf;
 				border-radius: 19px 25px 2px 0/12px 11px 2px 0;
 			}
@@ -439,9 +494,17 @@
 				left: -3px;
 				width: 15px;
 				height: 15px;
-				-webkit-transform: rotate(6deg);
 				border-radius: 7px 0 0 0/13px 0 0 0;
+				background: -webkit-radial-gradient(circle farthest-corner at 24px 34px, transparent 0%, transparent 73%, #afafaf 73%, #afafaf 100%);
+				background: -moz-radial-gradient(circle farthest-corner at 24px 34px, transparent 0%, transparent 73%, #afafaf 73%, #afafaf 100%);
+				background: -ms-radial-gradient(circle farthest-corner at 24px 34px, transparent 0%, transparent 73%, #afafaf 73%, #afafaf 100%);
+				background: -o-radial-gradient(circle farthest-corner at 24px 34px, transparent 0%, transparent 73%, #afafaf 73%, #afafaf 100%);
 				background: radial-gradient(circle farthest-corner at 24px 34px, transparent 0%, transparent 73%, #afafaf 73%, #afafaf 100%);
+				-webkit-transform: rotate(6deg);
+				-moz-transform: rotate(6deg);
+				-ms-transform: rotate(6deg);
+				-o-transform: rotate(6deg);
+				transform: rotate(6deg);
 			}
 
 			.leftEyeLines {
@@ -454,6 +517,10 @@
 				border-color: transparent transparent #cbcbcb transparent;
 				border-radius: 100%;
 				-webkit-transform: rotate(9deg);
+				-moz-transform: rotate(9deg);
+				-ms-transform: rotate(9deg);
+				-o-transform: rotate(9deg);
+				transform: rotate(9deg);
 			}
 
 			/* Left crows feet */
@@ -465,10 +532,13 @@
 				height: 8px;
 				top: 18px;
 				left: -6px;
-				border-style: solid;
-				border-width: 1px;
+				border: 1px solid gray;
 				border-color: transparent transparent gray transparent;
 				border-radius: 5px;
+				-webkit-transform: rotate(-14deg);
+				-moz-transform: rotate(-14deg);
+				-ms-transform: rotate(-14deg);
+				-o-transform: rotate(-14deg);
 				transform: rotate(-14deg);
 			}
 
@@ -481,10 +551,13 @@
 				height: 5px;
 				top: 25px;
 				left: -6px;
-				border-style: solid;
-				border-width: 1px;
+				border: 1px solid gray;
 				border-color: transparent transparent gray transparent;
 				border-radius: 1px;
+				-webkit-transform: rotate(-54deg);
+				-moz-transform: rotate(-54deg);
+				-ms-transform: rotate(-54deg);
+				-o-transform: rotate(-54deg);
 				transform: rotate(-54deg);
 			}
 
@@ -499,6 +572,10 @@
 				border: 1px solid gray;
 				border-color: gray transparent transparent gray;
 				border-radius: 15px 12px 0 0/13px 3px 0 0;
+				-webkit-transform: rotate(20deg);
+				-moz-transform: rotate(20deg);
+				-ms-transform: rotate(20deg);
+				-o-transform: rotate(20deg);
 				transform: rotate(20deg);
 			}
 
@@ -510,9 +587,12 @@
 				left: -15px;
 				width: 38px;
 				height: 7px;
-				margin: 0;
 				background: #afafaf;
 				border-radius: 25px 19px 0 2px/11px 12px 0 2px;
+				-webkit-transform: rotate(-20deg);
+				-moz-transform: rotate(-20deg);
+				-ms-transform: rotate(-20deg);
+				-o-transform: rotate(-20deg);
 				transform: rotate(-20deg);
 			}
 
@@ -524,9 +604,16 @@
 				left: 15px;
 				width: 21px;
 				height: 23px;
-				-webkit-transform: rotate(6deg);
 				border-radius: 0 14px 0 0/0 13px 0 0;
+				background: -webkit-radial-gradient(circle farthest-corner at -5px 40px, transparent 0%, transparent 71%, #afafaf 71%, #afafaf 100%);
+				background: -moz-radial-gradient(circle farthest-corner at -5px 40px, transparent 0%, transparent 71%, #afafaf 71%, #afafaf 100%);
+				background: -ms-radial-gradient(circle farthest-corner at -5px 40px, transparent 0%, transparent 71%, #afafaf 71%, #afafaf 100%);
+				background: -o-radial-gradient(circle farthest-corner at -5px 40px, transparent 0%, transparent 71%, #afafaf 71%, #afafaf 100%);
 				background: radial-gradient(circle farthest-corner at -5px 40px, transparent 0%, transparent 71%, #afafaf 71%, #afafaf 100%);
+				-webkit-transform: rotate(-20deg);
+				-moz-transform: rotate(-20deg);
+				-ms-transform: rotate(-20deg);
+				-o-transform: rotate(-20deg);
 				transform: rotate(-20deg);
 			}
 
@@ -540,6 +627,10 @@
 				border-color: transparent transparent #cbcbcb transparent;
 				border-radius: 100%;
 				-webkit-transform: rotate(-32deg);
+				-moz-transform: rotate(-32deg);
+				-ms-transform: rotate(-32deg);
+				-o-transform: rotate(-32deg);
+				transform: rotate(-32deg);
 			}
 
 			.rightEyeLines:before {
@@ -554,10 +645,14 @@
 				border-color: transparent transparent #cbcbcb transparent;
 				border-radius: 100%;
 				-webkit-transform: rotate(-1deg);
+				-moz-transform: rotate(-1deg);
+				-ms-transform: rotate(-1deg);
+				-o-transform: rotate(-1deg);
+				transform: rotate(-1deg);
 			}
 
 			.rightEyeLines:after {
-				content: '';
+				content: "";
 				display: block;
 				position: absolute;
 				top: 20px;
@@ -568,6 +663,10 @@
 				border-color: transparent transparent #cbcbcb transparent;
 				border-radius: 100%;
 				-webkit-transform: rotate(-1deg);
+				-moz-transform: rotate(-1deg);
+				-ms-transform: rotate(-1deg);
+				-o-transform: rotate(-1deg);
+				transform: rotate(-1deg);
 			}
 
 			.rightCrowsFeet {
@@ -580,10 +679,14 @@
 				border-color: transparent transparent #cbcbcb transparent;
 				border-radius: 100%;
 				-webkit-transform: rotate(-23deg);
+				-moz-transform: rotate(-23deg);
+				-ms-transform: rotate(-23deg);
+				-o-transform: rotate(-23deg);
+				transform: rotate(-23deg);
 			}
 
 			.rightCrowsFeet:before {
-				content: '';
+				content: "";
 				display: block;
 				position: absolute;
 				top: 8px;
@@ -594,6 +697,10 @@
 				border-color: transparent transparent #cbcbcb transparent;
 				border-radius: 100%;
 				-webkit-transform: rotate(14deg);
+				-moz-transform: rotate(14deg);
+				-ms-transform: rotate(14deg);
+				-o-transform: rotate(14deg);
+				transform: rotate(14deg);
 			}
 
 			.mouth {
@@ -618,6 +725,10 @@
 				border-radius: 32px/13px;
 				box-shadow: 1px 1px 0 black;
 				-webkit-transform: skewX(-21deg);
+				-moz-transform: skewX(-21deg);
+				-ms-transform: skewX(-21deg);
+				-o-transform: skewX(-21deg);
+				transform: skewX(-21deg);
 			}
 
 			.mouth:after {
@@ -625,21 +736,25 @@
 				position: absolute;
 				display: block;
 				top: 17px;
-				left: 0px;
+				left: 0;
 				width: 68px;
 				height: 12px;
 				background: white;
 				border-radius: 32px/6px;
 				-webkit-transform: skewX(-67deg);
+				-moz-transform: skewX(-67deg);
+				-ms-transform: skewX(-67deg);
+				-o-transform: skewX(-67deg);
+				transform: skewX(-67deg);
 			}
 
 			.mouthMask {
 				position: absolute;
 				top: 240px;
 				left: 94px;
-				background: white;
 				width: 72px;
 				height: 25px;
+				background: white;
 			}
 
 			.leftOuterNostril {
@@ -651,31 +766,6 @@
 				border: 1px solid #cbcbcb;
 				border-color: #cbcbcb transparent #cbcbcb #cbcbcb;
 				border-radius: 17px 13px 13px 17px/20px 20px 20px 20px;
-				-webkit-transform: rotate(0deg);
-			}
-
-			/* mask */
-			.xleftOuterNostril:before {
-				content: "";
-				position: absolute;
-				display: block;
-				top: -2px;
-				left: 7px;
-				width: 4px;
-				height: 14px;
-				background: white;
-			}
-
-			.xleftOuterNostril:after {
-				content: "";
-				position: absolute;
-				display: block;
-				top: -35px;
-				left: -4px;
-				width: 1px;
-				height: 36px;
-				background: #cbcbcb;
-				-webkit-transform: rotate(-10deg);
 			}
 
 			.leftInnerNostril {
@@ -698,6 +788,10 @@
 				border-width: 1px 0px 1px 5px;
 				border-color: transparent transparent transparent #999;
 				-webkit-transform: rotate(37deg);
+				-moz-transform: rotate(37deg);
+				-ms-transform: rotate(37deg);
+				-o-transform: rotate(37deg);
+				transform: rotate(37deg);
 			}
 
 			.rightOuterNostril {
@@ -710,30 +804,10 @@
 				border-color: #cbcbcb #cbcbcb #cbcbcb transparent;
 				border-radius: 10px 8px 8px 10px/10px 7px 7px 10px;
 				-webkit-transform: rotate(-15deg);
-			}
-
-			/* mask */
-			.xrightOuterNostril:before {
-				content: "";
-				position: absolute;
-				display: block;
-				top: -2px;
-				left: -1px;
-				width: 4px;
-				height: 4px;
-				background: white;
-			}
-
-			/* mask */
-			.xrightOuterNostril:after {
-				content: "";
-				position: absolute;
-				display: block;
-				top: 11px;
-				left: 0;
-				width: 4px;
-				height: 3px;
-				background: white;
+				-moz-transform: rotate(-15deg);
+				-ms-transform: rotate(-15deg);
+				-o-transform: rotate(-15deg);
+				transform: rotate(-15deg);
 			}
 
 			.rightInnerNostril {
@@ -743,8 +817,12 @@
 				width: 8px;
 				height: 4px;
 				background: #999;
-				border-radius: 16px 24px 3px 0px/10px 15px 2px 0px;
+				border-radius: 16px 24px 3px 0/10px 15px 2px 0;
 				-webkit-transform: rotate(-20deg);
+				-moz-transform: rotate(-20deg);
+				-ms-transform: rotate(-20deg);
+				-o-transform: rotate(-20deg);
+				transform: rotate(-20deg);
 			}
 
 			.rightInnerNostril:after {
@@ -756,8 +834,12 @@
 				width: 6px;
 				height: 3px;
 				background: #999;
-				border-radius: 8px 5px 0px 0px/4px 0px 0px 0px;
+				border-radius: 8px 5px 0 0/4px 0 0 0;
 				-webkit-transform: rotate(-20deg);
+				-moz-transform: rotate(-20deg);
+				-ms-transform: rotate(-20deg);
+				-o-transform: rotate(-20deg);
+				transform: rotate(-20deg);
 			}
 
 			.noseTip {
@@ -770,6 +852,10 @@
 				border-color: transparent transparent #cbcbcb transparent;
 				border-radius: 18px;
 				-webkit-transform: rotate(-2deg);
+				-moz-transform: rotate(-2deg);
+				-ms-transform: rotate(-2deg);
+				-o-transform: rotate(-2deg);
+				transform: rotate(-2deg);
 			}
 
 			/* Left smile line */
@@ -780,10 +866,14 @@
 				width: 33px;
 				height: 6px;
 				background: none;
-				transform: rotate(-46deg);
 				border: 1px solid #cbcbcb;
 				border-color: transparent transparent transparent #cbcbcb;
-				border-radius: 30px 0px 0px 0px/13px 0px 0px 0px;
+				border-radius: 30px 0 0 0/13px 0 0 0;
+				-webkit-transform: rotate(-46deg);
+				-moz-transform: rotate(-46deg);
+				-ms-transform: rotate(-46deg);
+				-o-transform: rotate(-46deg);
+				transform: rotate(-46deg);
 
 			}
 
@@ -796,10 +886,14 @@
 				width: 34px;
 				height: 11px;
 				background: none;
-				transform: rotate(-100deg);
 				border: 1px solid #cbcbcb;
 				border-color: transparent transparent transparent #cbcbcb;
-				border-radius: 0px 0px 0px 31px/0px 0px 0px 18px;
+				border-radius: 0 0 0 31px/0 0 0 18px;
+				-webkit-transform: rotate(-100deg);
+				-moz-transform: rotate(-100deg);
+				-ms-transform: rotate(-100deg);
+				-o-transform: rotate(-100deg);
+				transform: rotate(-100deg);
 			}
 
 			.smileLines:after {
@@ -811,18 +905,21 @@
 				width: 26px;
 				height: 1px;
 				background: #e0e0e0;
+				-webkit-transform: rotate(46deg);
+				-moz-transform: rotate(46deg);
+				-ms-transform: rotate(46deg);
+				-o-transform: rotate(46deg);
 				transform: rotate(46deg);
 			}
 
 			.hair {
 				position: absolute;
-				margin: 0;
 				top: 44px;
 				left: 50px;
 				width: 200px;
 				height: 55px;
 				background: #180f14;
-				border-radius: 292px 292px 0px 0px/168px 168px 0px 0px;
+				border-radius: 292px 292px 0 0/168px 168px 0 0;
 			}
 
 			.hair:before {
@@ -830,11 +927,11 @@
 				display: block;
 				position: absolute;
 				top: 53px;
-				left: 0px;
+				left: 0;
 				width: 18px;
 				height: 99px;
 				background: #110d12;
-				border-radius: 0px 0px 0px 171px/0px 0px 0px 61px;
+				border-radius: 0 0 0 171px/0 0 0 61px;
 			}
 
 			.hair:after {
@@ -846,7 +943,7 @@
 				width: 43px;
 				height: 86px;
 				background: #110d12;
-				border-radius: 0px 0px 0px 0px/0px 0px 0px 61px;
+				border-radius: 0 0 0 0/0 0 0 61px;
 			}
 
 			.hairCurve {
@@ -856,6 +953,10 @@
 				left: -2px;
 				width: 36px;
 				height: 48px;
+				background: -webkit-radial-gradient(ellipse farthest-corner at 38px 49px, transparent 0%, transparent 63%, #110d12 63%, #110d12 100%);
+				background: -moz-radial-gradient(ellipse farthest-corner at 38px 49px, transparent 0%, transparent 63%, #110d12 63%, #110d12 100%);
+				background: -ms-radial-gradient(ellipse farthest-corner at 38px 49px, transparent 0%, transparent 63%, #110d12 63%, #110d12 100%);
+				background: -o-radial-gradient(ellipse farthest-corner at 38px 49px, transparent 0%, transparent 63%, #110d12 63%, #110d12 100%);
 				background: radial-gradient(ellipse farthest-corner at 38px 49px, transparent 0%, transparent 63%, #110d12 63%, #110d12 100%);
 			}
 
@@ -867,6 +968,10 @@
 				left: 114px;
 				width: 36px;
 				height: 69px;
+				background: -webkit-radial-gradient(ellipse farthest-corner at -2px 49px, transparent 0%, transparent 59%, #110d12 59%, #110d12 100%);
+				background: -moz-radial-gradient(ellipse farthest-corner at -2px 49px, transparent 0%, transparent 59%, #110d12 59%, #110d12 100%);
+				background: -ms-radial-gradient(ellipse farthest-corner at -2px 49px, transparent 0%, transparent 59%, #110d12 59%, #110d12 100%);
+				background: -o-radial-gradient(ellipse farthest-corner at -2px 49px, transparent 0%, transparent 59%, #110d12 59%, #110d12 100%);
 				background: radial-gradient(ellipse farthest-corner at -2px 49px, transparent 0%, transparent 59%, #110d12 59%, #110d12 100%);
 			}
 
@@ -879,20 +984,32 @@
 				left: 144px;
 				width: 10px;
 				height: 18px;
+				background: -webkit-radial-gradient(ellipse farthest-corner at -6px 19px, #e8e8e8 0%, #e8e8e8 65%, transparent 65%, transparent 100%);
+				background: -moz-radial-gradient(ellipse farthest-corner at -6px 19px, #e8e8e8 0%, #e8e8e8 65%, transparent 65%, transparent 100%);
+				background: -ms-radial-gradient(ellipse farthest-corner at -6px 19px, #e8e8e8 0%, #e8e8e8 65%, transparent 65%, transparent 100%);
+				background: -o-radial-gradient(ellipse farthest-corner at -6px 19px, #e8e8e8 0%, #e8e8e8 65%, transparent 65%, transparent 100%);
 				background: radial-gradient(ellipse farthest-corner at -6px 19px, #e8e8e8 0%, #e8e8e8 65%, transparent 65%, transparent 100%);
+				-webkit-transform: rotate(2deg);
+				-moz-transform: rotate(2deg);
+				-ms-transform: rotate(2deg);
+				-o-transform: rotate(2deg);
 				transform: rotate(2deg);
 			}
 
 			.rightHair {
 				position: absolute;
+				z-index: 2;
 				top: 79px;
 				left: 150px;
 				width: 47px;
 				height: 22px;
 				background: #110d12;
-				transform: rotate(-23deg);
-				z-index: 2;
 				border-radius: 5px 2px 35px 17px/19px 2px 23px 4px;
+				-webkit-transform: rotate(-23deg);
+				-moz-transform: rotate(-23deg);
+				-ms-transform: rotate(-23deg);
+				-o-transform: rotate(-23deg);
+				transform: rotate(-23deg);
 			}
 
 			.rightHair:before {
@@ -905,6 +1022,10 @@
 				height: 26px;
 				border-radius: 100%;
 				background: #110d12;
+				-webkit-transform: rotate(22deg);
+				-moz-transform: rotate(22deg);
+				-ms-transform: rotate(22deg);
+				-o-transform: rotate(22deg);
 				transform: rotate(22deg);
 			}
 
@@ -918,6 +1039,10 @@
 				height: 24px;
 				border-radius: 100%;
 				background: #110d12;
+				-webkit-transform: rotate(22deg);
+				-moz-transform: rotate(22deg);
+				-ms-transform: rotate(22deg);
+				-o-transform: rotate(22deg);
 				transform: rotate(22deg);
 			}
 
@@ -929,6 +1054,10 @@
 				height: 28px;
 				border-radius: 100%;
 				background: #110d12;
+				-webkit-transform: rotate(11deg);
+				-moz-transform: rotate(11deg);
+				-ms-transform: rotate(11deg);
+				-o-transform: rotate(11deg);
 				transform: rotate(11deg);
 			}
 
@@ -942,7 +1071,6 @@
 				height: 33px;
 				border-radius: 100%;
 				background: #110d12;
-				transform: rotate(0deg);
 			}
 
 			.rightHairTopBumps:after {
@@ -959,14 +1087,19 @@
 
 			.leftHairBumps {
 				position: absolute;
+				z-index: 2;
 				top: -43px;
 				left: 21px;
 				width: 17px;
 				height: 14px;
 				border-radius: 100%;
 				background: #110d12;
+				-webkit-transform: rotate(-30deg);
+				-moz-transform: rotate(-30deg);
+				-ms-transform: rotate(-30deg);
+				-o-transform: rotate(-30deg);
 				transform: rotate(-30deg);
-				z-index: 2;
+
 			}
 
 			.leftHairBumps:before {
@@ -979,6 +1112,10 @@
 				height: 28px;
 				border-radius: 100%;
 				background: #110d12;
+				-webkit-transform: rotate(30deg);
+				-moz-transform: rotate(30deg);
+				-ms-transform: rotate(30deg);
+				-o-transform: rotate(30deg);
 				transform: rotate(30deg);
 			}
 
@@ -990,19 +1127,31 @@
 				left: -85px;
 				width: 17px;
 				height: 63px;
-				border-radius: 0px 3px 0px 11px/0px 5px 0px 10px;
+				border-radius: 0 3px 0 11px/0 5px 0 10px;
 				background: #110d12;
+				-webkit-transform: rotate(37deg);
+				-moz-transform: rotate(37deg);
+				-ms-transform: rotate(37deg);
+				-o-transform: rotate(37deg);
 				transform: rotate(37deg);
 			}
 
 			.hairLeftEar {
 				position: absolute;
+				z-index: 2;
 				top: 100px;
 				left: -13px;
 				width: 13px;
 				height: 12px;
+				background: -webkit-radial-gradient(ellipse farthest-corner at -9px 22px, transparent 0%, transparent 77%, #110d12 77%, #110d12 100%);
+				background: -moz-radial-gradient(ellipse farthest-corner at -9px 22px, transparent 0%, transparent 77%, #110d12 77%, #110d12 100%);
+				background: -ms-radial-gradient(ellipse farthest-corner at -9px 22px, transparent 0%, transparent 77%, #110d12 77%, #110d12 100%);
+				background: -o-radial-gradient(ellipse farthest-corner at -9px 22px, transparent 0%, transparent 77%, #110d12 77%, #110d12 100%);
 				background: radial-gradient(ellipse farthest-corner at -9px 22px, transparent 0%, transparent 77%, #110d12 77%, #110d12 100%);
-				z-index: 2;
+				-webkit-transform: rotate(5deg);
+				-moz-transform: rotate(5deg);
+				-ms-transform: rotate(5deg);
+				-o-transform: rotate(5deg);
 				transform: rotate(5deg);
 			}
 
@@ -1026,21 +1175,11 @@
 				width: 5px;
 				height: 49px;
 				background: white;
+				-webkit-transform: rotate(-3deg);
+				-moz-transform: rotate(-3deg);
+				-ms-transform: rotate(-3deg);
+				-o-transform: rotate(-3deg);
 				transform: rotate(-3deg);
-			}
-
-			/*  https://developer.mozilla.org/en-US/docs/Web/CSS/repeating-radial-gradient */
-			.hairHighlights {
-
-			}
-
-			/*  https://developer.mozilla.org/en-US/docs/Web/CSS/repeating-linear-gradient */
-			.moreHairHighlights {
-
-			}
-
-			body {
-				margin: 0;
 			}
 
 			.cartoon {
@@ -1057,7 +1196,7 @@
 				z-index: 2;
 			}
 
-			.cartoon2 {
+			.dSchulmanPhoto {
 				background: url('images/danSchulman.jpg') no-repeat top left;
 				background-size: 222px;
 				width: 300px;
@@ -1078,10 +1217,11 @@
 	</head>
 
 	<body>
+
 		<div class="dSchulman">
 			<h1 class="implementation">Pure CSS implementation of Dan Schulman</h1>
 
-			<p class="">All content was taken from the Wikipedia article here: . The HTML and CSS are mine.</p>
+			<p>All content was taken from this <cite><a href="https://en.wikipedia.org/wiki/Dan_Schulman" target="_blank" title="Wikipedia article about Dan Schulman">Wikipedia article</a></cite>. The HTML and CSS are all mine.</p>
 
 			<h2 class="ears">Dan Schulman</h2>
 
@@ -1117,10 +1257,10 @@
 
 			<h2 class="hair">Personal</h2>
 
-			<p class="smileLines">When he was CEO of Virgin Mobile, Schulman led a partnership with <span class="hairHighlights">StandUp For Kids</span>, a nonprofit that distributes survival kits and a hotline number to homeless youth. To get a truer sense of what homeless kids experience, <span class="moreHairHighlights">Schulman once spent 24 hours on the streets of New York City, unshaven, wrapped in a blanket, and without money, a watch, or a cell phone</span>. "There’s a certain amount of deference paid to a C.E.O.," he later said. "No one paid attention to me on the street. I consider myself a good communicator and a good salesman. It took me five hours of begging to raise less than a dollar. My entire concept of what is important changed. Time is usually my most valuable commodity, but for that 24 hours I had too much time. Forget Starbucks and a $4 latte — I walked two miles to find a 25-cent cup of coffee."</p>
+			<p class="smileLines">When he was CEO of Virgin Mobile, Schulman led a partnership with StandUp For Kids, a nonprofit that distributes survival kits and a hotline number to homeless youth. To get a truer sense of what homeless kids experience, Schulman once spent 24 hours on the streets of New York City, unshaven, wrapped in a blanket, and without money, a watch, or a cell phone. "There’s a certain amount of deference paid to a C.E.O.," he later said. "No one paid attention to me on the street. I consider myself a good communicator and a good salesman. It took me five hours of begging to raise less than a dollar. My entire concept of what is important changed. Time is usually my most valuable commodity, but for that 24 hours I had too much time. Forget Starbucks and a $4 latte — I walked two miles to find a 25-cent cup of coffee."</p>
 		</div>
 		<div class="cartoon"></div>
-		<div class="cartoon2"></div>
+		<div class="dSchulmanPhoto"></div>
 		<div class="cartoon3"></div>
 	</body>
 </html>
