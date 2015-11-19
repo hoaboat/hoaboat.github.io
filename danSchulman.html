@@ -6,6 +6,7 @@
 		<meta charset="utf-8"/>
 		<meta name="keywords" content="Dan Schulman in CSS"/>
 		<meta name="description" content="Dan Schulman created with CSS"/>
+		<meta name="author" content="Hoa Doan Klein"/>
 
 		<style>
 			* {
@@ -17,6 +18,7 @@
 				position: relative;
 				width: 300px;
 				height: 370px;
+				float: left;
 			}
 
 			.face {
@@ -227,32 +229,32 @@
 				content: "";
 				display: block;
 				position: absolute;
-				top: 3px;
-				left: -4px;
+				top: 8px;
+				left: -3px;
 				width: 1px;
-				height: 44px;
+				height: 34px;
 				background: #cbcbcb;
-				-webkit-transform: rotate(6deg);
-				-moz-transform: rotate(6deg);
-				-ms-transform: rotate(6deg);
-				-o-transform: rotate(6deg);
-				transform: rotate(6deg);
+				-webkit-transform: rotate(5deg);
+				-moz-transform: rotate(5deg);
+				-ms-transform: rotate(5deg);
+				-o-transform: rotate(5deg);
+				transform: rotate(5deg);
 			}
 
 			.nose:after {
 				content: "";
 				display: block;
 				position: absolute;
-				top: 3px;
+				top: 8px;
 				left: 18px;
 				width: 1px;
-				height: 44px;
+				height: 34px;
 				background: #cbcbcb;
 				-webkit-transform: rotate(-7deg);
 				-moz-transform: rotate(-7deg);
 				-ms-transform: rotate(-7deg);
 				-o-transform: rotate(-7deg);
-				transform: rotate(-7deg);
+				transform: rotate(-5deg);
 			}
 
 			.ears {
@@ -1182,46 +1184,33 @@
 				transform: rotate(-3deg);
 			}
 
-			.cartoon {
-				margin-top: -337px;
-
-				background: url('images/danSchulman.jpg') no-repeat top left;
-
-				background-size: 235px;
-				background-position: 34px -7px;
-				width: 300px;
-				height: 300px;
-				opacity: .5;
-				position: relative;
-				z-index: 2;
-			}
-
 			.dSchulmanPhoto {
+				float: left;
+				margin: 25px 0 0 32px;
 				background: url('images/danSchulman.jpg') no-repeat top left;
 				background-size: 222px;
 				width: 300px;
 				height: 300px;
-				position: absolute;
-				top: 33px;
-				left: 260px;
 			}
 
-			.cartoon3 {
-				width: 300px;
-				height: 300px;
-				background: url('images/danSchulman.png') no-repeat top left;
-				background-size: 300px;
+			.implementation {
+				margin: 20px;
+				color: black;
 			}
-
+			
+			.citation {
+				display: none;
+			}
 		</style>
 	</head>
 
 	<body>
 
-		<div class="dSchulman">
-			<h1 class="implementation">Pure CSS implementation of Dan Schulman</h1>
+		<h1 class="implementation">Pure CSS implementation of Dan Schulman</h1>
 
-			<p>All content was taken from this <cite><a href="https://en.wikipedia.org/wiki/Dan_Schulman" target="_blank" title="Wikipedia article about Dan Schulman">Wikipedia article</a></cite>. The HTML and CSS are all mine.</p>
+		<p class="citation">All content was taken from this <cite><a href="https://en.wikipedia.org/wiki/Dan_Schulman" target="_blank" title="Wikipedia article about Dan Schulman">Wikipedia article</a></cite>. The HTML and CSS are all mine.</p>
+
+		<div class="dSchulman">
 
 			<h2 class="ears">Dan Schulman</h2>
 
@@ -1259,8 +1248,6 @@
 
 			<p class="smileLines">When he was CEO of Virgin Mobile, Schulman led a partnership with StandUp For Kids, a nonprofit that distributes survival kits and a hotline number to homeless youth. To get a truer sense of what homeless kids experience, Schulman once spent 24 hours on the streets of New York City, unshaven, wrapped in a blanket, and without money, a watch, or a cell phone. "There’s a certain amount of deference paid to a C.E.O.," he later said. "No one paid attention to me on the street. I consider myself a good communicator and a good salesman. It took me five hours of begging to raise less than a dollar. My entire concept of what is important changed. Time is usually my most valuable commodity, but for that 24 hours I had too much time. Forget Starbucks and a $4 latte — I walked two miles to find a 25-cent cup of coffee."</p>
 		</div>
-		<div class="cartoon"></div>
 		<div class="dSchulmanPhoto"></div>
-		<div class="cartoon3"></div>
 	</body>
 </html>
