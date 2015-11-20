@@ -762,6 +762,7 @@
 
 			.leftOuterNostril {
 				position: absolute;
+				z-index: 1;
 				top: 233px;
 				left: 107px;
 				width: 9px;
@@ -773,6 +774,7 @@
 
 			.leftInnerNostril {
 				position: absolute;
+				z-index: 2;
 				top: 244px;
 				left: 113px;
 				width: 3px;
@@ -799,6 +801,7 @@
 
 			.rightOuterNostril {
 				position: absolute;
+				z-index: 1;
 				top: 231px;
 				left: 141px;
 				width: 11px;
@@ -815,6 +818,7 @@
 
 			.rightInnerNostril {
 				position: absolute;
+				z-index: 2;
 				top: 243px;
 				left: 137px;
 				width: 8px;
@@ -870,7 +874,7 @@
 				height: 6px;
 				background: none;
 				border: 1px solid #cbcbcb;
-				border-color: transparent transparent transparent #cbcbcb;
+				border-color: #cbcbcb transparent transparent #cbcbcb;
 				border-radius: 30px 0 0 0/13px 0 0 0;
 				-webkit-transform: rotate(-46deg);
 				-moz-transform: rotate(-46deg);
@@ -890,7 +894,7 @@
 				height: 11px;
 				background: none;
 				border: 1px solid #cbcbcb;
-				border-color: transparent transparent transparent #cbcbcb;
+				border-color: transparent transparent #cbcbcb #cbcbcb;
 				border-radius: 0 0 0 31px/0 0 0 18px;
 				-webkit-transform: rotate(-100deg);
 				-moz-transform: rotate(-100deg);
@@ -913,6 +917,32 @@
 				-ms-transform: rotate(46deg);
 				-o-transform: rotate(46deg);
 				transform: rotate(46deg);
+			}
+
+			.hideSmileLines {
+				position: absolute;
+				display: block;
+				top: -1px;
+				left: 33px;
+				width: 2px;
+				height: 8px;
+				background: white;
+			}
+
+			.hideSmileLines:before {
+				content: "";
+				position: absolute;
+				display: block;
+				top: 31px;
+				left: 29px;
+				width: 2px;
+				height: 13px;
+				background: white;
+				-webkit-transform: rotate(79deg);
+				-moz-transform: rotate(79deg);
+				-ms-transform: rotate(79deg);
+				-o-transform: rotate(79deg);
+				transform: rotate(79deg);
 			}
 
 			.hair {
@@ -1247,7 +1277,7 @@
 
 			<h2 class="hair">Personal</h2>
 
-			<p class="smileLines">When he was CEO of Virgin Mobile, Schulman led a partnership with StandUp For Kids, a nonprofit that distributes survival kits and a hotline number to homeless youth. To get a truer sense of what homeless kids experience, Schulman once spent 24 hours on the streets of New York City, unshaven, wrapped in a blanket, and without money, a watch, or a cell phone. "There’s a certain amount of deference paid to a C.E.O.," he later said. "No one paid attention to me on the street. I consider myself a good communicator and a good salesman. It took me five hours of begging to raise less than a dollar. My entire concept of what is important changed. Time is usually my most valuable commodity, but for that 24 hours I had too much time. Forget Starbucks and a $4 latte — I walked two miles to find a 25-cent cup of coffee."</p>
+			<p class="smileLines">When he was CEO of Virgin Mobile, Schulman led a partnership with <span class="hideSmileLines">StandUp For Kids</span>, a nonprofit that distributes survival kits and a hotline number to homeless youth. To get a truer sense of what homeless kids experience, Schulman once spent 24 hours on the streets of New York City, unshaven, wrapped in a blanket, and without money, a watch, or a cell phone. "There’s a certain amount of deference paid to a C.E.O.," he later said. "No one paid attention to me on the street. I consider myself a good communicator and a good salesman. It took me five hours of begging to raise less than a dollar. My entire concept of what is important changed. Time is usually my most valuable commodity, but for that 24 hours I had too much time. Forget Starbucks and a $4 latte — I walked two miles to find a 25-cent cup of coffee."</p>
 		</div>
 		<div class="dSchulmanPhoto"></div>
 	</body>
