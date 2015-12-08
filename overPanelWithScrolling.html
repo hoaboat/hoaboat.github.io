@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Over Panel</title>
+		
+		<meta charset="utf-8" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		
+		<style>
+			.upsellMask, .upsellWrapper {
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				z-index: 10;
+			}
+
+			.upsellMask {
+				background: #CBD2D6;
+				opacity: 0.7;
+			}
+
+			.upsellWrapper:before {
+				content: "";
+				display: block;
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				left: 50%;
+				transform: translate(-50%, 0);
+				width: 620px;
+				background: white;
+				border-radius: 5px;
+			}
+
+			.upsellContainer {
+				position: fixed;
+				top: 90px;
+				bottom: 56px;
+				left: 50%;
+				transform: translate(-50%, 0);
+				width: 380px;
+				overflow-y: scroll;
+			}
+
+			.upsellWrapper:after {
+				content: "";
+				display: block;
+				position: fixed;
+				bottom: 0;
+				width: 100%;
+				background: transparent url("https://www.paypalobjects.com/images/shared/momgram@2x.png") center center no-repeat;
+				background-size: 20px;
+				height: 56px;
+			}
+
+			li {
+				padding-bottom: 20px;
+			}
+
+		</style>
+	</head>
+	
+	<body>
+		<h1>Over Panel</h1>
+
+		<div class="upsellMask"></div>
+		<div class="upsellWrapper">
+			<div class="upsellContainer">
+				<h1>Something about a Buzz Word</h1>
+
+				<ul>
+					<li>Bullet point number one</li>
+					<li>Bullet point number two</li>
+					<li>Bullet point number three</li>
+				</ul>
+
+				<p>Content in here that will be really, really, really, long. Talking about content in here that will be really, really, really, long.
+					Content in here that will be really, really, really, long. More talking about content in here that will be really, really, really, long.
+					Content in here that will be really, really, really, long. Even more talking about content in here that will be really, really, really, long.
+					Content in here that will be really, really, really, long. Wow, content in here that will be really, really, really, long.
+				</p>
+
+				<p>Perhaps another paragraph of content in here that will be really, really, really, long. And still more content in here that will be really, really, really, long.
+					Content in here that will be really, really, really, long. Hello Content in here that will be really, really, really, long.
+					Content in here that will be really, really, really, long. is it me Content in here that will be really, really, really, long.
+					Content in here that will be really, really, really, long. you're looking for? Content in here that will be really, really, really, long.
+					I can see it in your eyes. Content in here that will be really, really, really, long. I can see Content in here that will be really, really, really, long.
+					it in your smile. Content in here that will be really, really, really, long. You're all I've ever wanted. Content in here that will be really, really, really, long.
+					And my arms are open wide. Content in here that will be really, really, really, long. it in your smile. Content in here that will be really, really, really, long The End.
+				</p>
+			</div>
+		</div>
+
+	</body>
+</html>

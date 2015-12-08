@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Flex</title>
+		
+		<meta charset="utf-8" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		
+		<style>
+			.parent {
+				display: flex;
+				height: 100px;
+				width: 600px;
+				background: purple;
+			}
+
+			.child {
+				width: 100px;
+				height: 50px;
+				margin: auto;
+				background: green;
+			}
+
+			.mother {
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: space-around;
+				align-items: center;
+				width: 600px;
+				height: 100px;
+				background: dimgray;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+
+			.children {
+				width: 75px;
+				height: 75px;
+				background: pink;
+			}
+
+			.container {
+				margin: 20px;
+			}
+
+		</style>
+	</head>
+	
+	<body>
+		<h1>Flex</h1>
+
+		<div class="parent container">
+			<div class="child"></div>
+		</div>
+
+		<ul class="mother container">
+			<li class="children">1</li>
+			<li class="children">2</li>
+			<li class="children">3</li>
+			<li class="children">4</li>
+		</ul>
+
+
+
+	</body>
+</html>
