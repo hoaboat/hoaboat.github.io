@@ -42,7 +42,7 @@
 				left: 50%;
 				transform: translate(-50%, 0);
 				width: 380px;
-				overflow-y: scroll;
+				background: white;
 			}
 
 			.upsellWrapper:after {
@@ -56,8 +56,11 @@
 				height: 56px;
 			}
 
-			li {
-				padding-bottom: 20px;
+			iframe {
+				border: 0;
+				width: 380px;
+				height: 100%;
+				background: white;
 			}
 
 			/* mobile ---- */
@@ -80,28 +83,7 @@
 		<div class="upsellMask"></div>
 		<div class="upsellWrapper">
 			<div class="upsellContainer">
-				<h1>Something about a Buzz Word</h1>
-
-				<ul>
-					<li>Bullet point number one</li>
-					<li>Bullet point number two</li>
-					<li>Bullet point number three</li>
-				</ul>
-
-				<p>Content in here that will be really, really, really, long. Talking about content in here that will be really, really, really, long.
-					Content in here that will be really, really, really, long. More talking about content in here that will be really, really, really, long.
-					Content in here that will be really, really, really, long. Even more talking about content in here that will be really, really, really, long.
-					Content in here that will be really, really, really, long. Wow, content in here that will be really, really, really, long.
-				</p>
-
-				<p>Perhaps another paragraph of content in here that will be really, really, really, long. And still more content in here that will be really, really, really, long.
-					Content in here that will be really, really, really, long. Hello Content in here that will be really, really, really, long.
-					Content in here that will be really, really, really, long. is it me Content in here that will be really, really, really, long.
-					Content in here that will be really, really, really, long. you're looking for? Content in here that will be really, really, really, long.
-					I can see it in your eyes. Content in here that will be really, really, really, long. I can see Content in here that will be really, really, really, long.
-					it in your smile. Content in here that will be really, really, really, long. You're all I've ever wanted. Content in here that will be really, really, really, long.
-					And my arms are open wide. Content in here that will be really, really, really, long. it in your smile. Content in here that will be really, really, really, long The End.
-				</p>
+				<iframe src="iframeContentForOverPanel.html" scrolling="yes"></iframe>
 			</div>
 		</div>
 
