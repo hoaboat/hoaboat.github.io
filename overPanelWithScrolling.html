@@ -66,7 +66,7 @@
 				left: 50%;
 				width: 380px;
 				background: white;
-				overflow-y: scroll;
+				overflow-y: auto;
 				-webkit-overflow-scrolling: touch;
 				-webkit-transform: translate(-50%, 0);
 				-moz-transform: translate(-50%, 0);
@@ -77,8 +77,8 @@
 
 			iframe {
 				border: 0;
-				width: 380px;
-				height: 100%;
+				width: 100%;
+				height: 99%;
 				background: white;
 			}
 
@@ -91,10 +91,6 @@
 				.upsellContainer {
 					top: 30px;
 					width: 80%;
-				}
-
-				iframe {
-					width: 100%;
 				}
 			}
 
@@ -109,7 +105,7 @@
 			<div class="upsellContainer">
 
 				<!-- UL needs to allow for customization or remove the scrolling attribute. -->
-				<iframe src="iframeContentForOverPanel.html"></iframe>
+				<iframe src="iframeContentForOverPanel.html" scrolling="no"></iframe>
 			</div>
 		</div>
 
