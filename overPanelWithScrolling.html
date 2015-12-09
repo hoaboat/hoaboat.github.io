@@ -25,7 +25,7 @@
 			.upsellWrapper:before {
 				content: "";
 				display: block;
-				position: fixed;
+				position: absolute;
 				top: 0;
 				bottom: 0;
 				left: 50%;
@@ -35,8 +35,22 @@
 				border-radius: 5px;
 			}
 
+			.upsellWrapper:after {
+				content: "";
+				display: block;
+				position: absolute;
+				bottom: 0;
+				width: 620px;
+				left: 50%;
+				transform: translate(-50%, 0);
+				background: white url("https://www.paypalobjects.com/images/shared/momgram@2x.png") center center no-repeat;
+				background-size: 20px;
+				height: 56px;
+				border-radius: 0 0 5px 5px;
+			}
+
 			.upsellContainer {
-				position: fixed;
+				position: absolute;
 				top: 90px;
 				bottom: 56px;
 				left: 50%;
@@ -45,22 +59,11 @@
 				background: white;
 			}
 
-			.upsellWrapper:after {
-				content: "";
-				display: block;
-				position: fixed;
-				bottom: 0;
-				width: 100%;
-				background: white url("https://www.paypalobjects.com/images/shared/momgram@2x.png") center center no-repeat;
-				background-size: 20px;
-				height: 56px;
-			}
-
 			iframe {
 				border: 0;
 				width: 380px;
 				height: 100%;
-				background: white;
+				background: pink;
 			}
 
 			/* mobile ---- */
