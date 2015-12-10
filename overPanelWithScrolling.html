@@ -19,6 +19,17 @@
 				z-index: 10;
 			}
 
+			.upsellWrapper {
+				-webkit-transform: translateY(110%);
+				-moz-transform: translateY(110%);
+				-ms-transform: translateY(110%);
+				-o-transform: translateY(110%);
+				-webkit-transition: -webkit-transform 0.3s ease-out;
+				-moz-transition: -moz-transform 0.3s ease-out;
+				-o-transition: -o-transform 0.3s ease-out;
+				transition: transform 0.3s ease-out;
+			}
+
 			.upsellMask {
 				background: #CBD2D6;
 				opacity: 0.7;
@@ -31,11 +42,11 @@
 				top: 0;
 				bottom: 0;
 				left: 50%;
-				-webkit-transform: translate(-50%, 0);
-				-moz-transform: translate(-50%, 0);
-				-ms-transform: translate(-50%, 0);
-				-o-transform: translate(-50%, 0);
-				transform: translate(-50%, 0);
+				-webkit-transform: translate(-50%, 0%);
+				-moz-transform: translate(-50%, 0%);
+				-ms-transform: translate(-50%, 0%);
+				-o-transform: translate(-50%, 0%);
+				transform: translate(-50%, 0%);
 				width: 620px;
 				background: white;
 				border-radius: 5px;
@@ -52,11 +63,11 @@
 				background-size: 20px;
 				height: 56px;
 				border-radius: 0 0 5px 5px;
-				-webkit-transform: translate(-50%, 0);
-				-moz-transform: translate(-50%, 0);
-				-ms-transform: translate(-50%, 0);
-				-o-transform: translate(-50%, 0);
-				transform: translate(-50%, 0);
+				-webkit-transform: translate(-50%, 0%);
+				-moz-transform: translate(-50%, 0%);
+				-ms-transform: translate(-50%, 0%);
+				-o-transform: translate(-50%, 0%);
+				transform: translate(-50%, 0%);
 			}
 
 			.upsellContainer {
@@ -82,6 +93,13 @@
 				background: white;
 			}
 
+			.openPanel .upsellWrapper {
+				-webkit-transform: translateY(0);
+				-moz-transform: translateY(0);
+				-ms-transform: translateY(0);
+				-o-transform: translateY(0);
+			}
+
 			/* mobile ---- */
 			@media all and (max-width: 767px) {
 				.upsellWrapper:before {
@@ -95,19 +113,26 @@
 			}
 
 		</style>
+		<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 	</head>
 	
 	<body>
-		<h1>Over Panel With Scrolling</h1>
+		<h1>Over Panel With Scrolling on Mobile</h1>
 
 		<div class="upsellMask"></div>
 		<div class="upsellWrapper">
 			<div class="upsellContainer">
-
-				<!-- UL needs to allow for customization or remove the scrolling attribute. -->
 				<iframe src="iframeContentForOverPanel.html" scrolling="no"></iframe>
 			</div>
 		</div>
 
+		<script>
+
+			setTimeout(launchOverPanel, 1000);
+
+			function launchOverPanel() {
+				$('body').addClass('openPanel');
+			}
+		</script>
 	</body>
 </html>
