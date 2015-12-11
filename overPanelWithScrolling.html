@@ -157,8 +157,11 @@
 				}
 			}
 
-			/* With the way the over panel is created on live, you must specify a height for the iframe.
+			/*
+			With the way the over panel is created on live, you must specify a height for the iframe.
 			This implementation does not, just use height: 100%;
+
+			And the upsellContainer doesn't know when the content is overflowing. So we cannot tell it to scroll.
 			*/
 
 		</style>
