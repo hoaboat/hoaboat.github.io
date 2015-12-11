@@ -98,7 +98,16 @@
 			}
 
 			.update {
+				font-size: 13px;
 				color: #6c7378;
+				line-height: 16px;
+			}
+
+			/* UL needs to do this. */
+			@media all and (max-width: 767px) {
+				h1 {
+					font-size: 23px;
+				}
 			}
 		</style>
 	</head>
@@ -112,7 +121,7 @@
 			<li>You're in control - you can turn this off at any time.</li>
 		</ul>
 
-		<p class="update"">We'll always ask you to log in to update your PayPal personal or financial info.</p>
+		<p class="update">We'll always ask you to log in to update your PayPal personal or financial info.</p>
 
 		<button type="submit" class="button actionButtonSpaced">Activate <span class="buzzword">One Touch</span></button>
 
