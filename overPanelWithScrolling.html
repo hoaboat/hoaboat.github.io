@@ -7,7 +7,7 @@
 		<meta name="keywords" content="" />
 		<meta name="description" content="" />
 		<meta name="author" content="Hoa Doan Klein"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=yes">
 		
 		<style>
 			.upsellMask, .upsellWrapper {
@@ -25,30 +25,18 @@
 			}
 
 			.upsellWrapper {
-				-webkit-transition: -webkit-transform 0.3s ease-out;
-				-moz-transition: -moz-transform 0.3s ease-out;
-				-o-transition: -o-transform 0.3s ease-out;
-				transition: transform 0.3s ease-out;
-
-
-				background: #fff;
 				width: 620px;
-				-webkit-box-sizing: border-box;
-				-moz-box-sizing: border-box;
-				-ms-box-sizing: border-box;
-				box-sizing: border-box;
 				left: 50%;
 				-webkit-transform: translate(-50%, 110%);
 				-moz-transform: translate(-50%, 110%);
 				-ms-transform: translate(-50%, 110%);
 				-o-transform: translate(-50%, 110%);
 				transform: translate(-50%, 110%);
-				padding: 90px 120px 0 120px;
-
-				-webkit-border-radius: 5px;
-				-moz-border-radius: 5px;
-				border-radius: 5px;
-
+				-webkit-transition: -webkit-transform 0.3s ease-out;
+				-moz-transition: -moz-transform 0.3s ease-out;
+				-o-transition: -o-transform 0.3s ease-out;
+				transition: transform 0.3s ease-out;
+				background: white;
 			}
 
 			.upsellWrapper:before {
@@ -181,59 +169,20 @@
 		<h1>Over Panel With Scrolling on Mobile</h1>
 		<div class="wrapper">
 			hello
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 			hi
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 			howdy
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 			chow
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 			<div class="upsellMask"></div>
 			<div class="upsellWrapper">
 				<a class="close" href="#" title="Close"></a>
 				<div class="upsellContainer">
+
+					<!-- UL needs to remove the scrolling attribute. -->
 					<iframe src="iframeContentForOverPanel.html"></iframe>
 				</div>
 			</div>
