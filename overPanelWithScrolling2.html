@@ -19,36 +19,20 @@
 				z-index: 10;
 			}
 
-			.upsellOpen .upsellMask {
+			.upsellMask {
 				background: #CBD2D6;
 				opacity: 0.7;
 			}
 
 			.upsellWrapper {
+				-webkit-transform: translateY(110%);
+				-moz-transform: translateY(110%);
+				-ms-transform: translateY(110%);
+				-o-transform: translateY(110%);
 				-webkit-transition: -webkit-transform 0.3s ease-out;
 				-moz-transition: -moz-transform 0.3s ease-out;
 				-o-transition: -o-transform 0.3s ease-out;
 				transition: transform 0.3s ease-out;
-
-
-				background: #fff;
-				width: 620px;
-				-webkit-box-sizing: border-box;
-				-moz-box-sizing: border-box;
-				-ms-box-sizing: border-box;
-				box-sizing: border-box;
-				left: 50%;
-				-webkit-transform: translate(-50%, 110%);
-				-moz-transform: translate(-50%, 110%);
-				-ms-transform: translate(-50%, 110%);
-				-o-transform: translate(-50%, 110%);
-				transform: translate(-50%, 110%);
-				padding: 90px 120px 0 120px;
-
-				-webkit-border-radius: 5px;
-				-moz-border-radius: 5px;
-				border-radius: 5px;
-
 			}
 
 			.upsellWrapper:before {
@@ -109,34 +93,25 @@
 				background: white;
 			}
 
-			.upsellOpen .upsellWrapper {
-				-webkit-transform: translate(-50%, 0);
-				-moz-transform: translate(-50%, 0);
-				-ms-transform: translate(-50%, 0);
-				-o-transform: translate(-50%, 0);
+			.openPanel .upsellWrapper {
+				-webkit-transform: translateY(0);
+				-moz-transform: translateY(0);
+				-ms-transform: translateY(0);
+				-o-transform: translateY(0);
 			}
 
 			.wrapper {
 				background: pink;
-				max-height: auto;
+				height: auto;
 			}
 
-			.close {
-				position: absolute;
-				top: 15px;
-				right: 20px;
-				width: 19px;
-				height: 19px;
-				padding: 0;
-				background-image: url("https://www.paypalobjects.com/images/checkout/hermes/hermes_window_sprite_v10.png");
-				background-repeat: no-repeat;
-				background-position: -223px 0;
+			.openPanel .wrapper {
+				height: 300px;
+				overflow: hidden;
 			}
-
 
 			/* mobile ---- */
 			@media all and (max-width: 767px) {
-				.upsellWrapper,
 				.upsellWrapper:before {
 					width: 100%;
 				}
@@ -145,21 +120,7 @@
 					top: 30px;
 					width: 80%;
 				}
-
-				.upsellOpen .wrapper {
-					max-height: 190px;
-					overflow: hidden;
-				}
-
-				.close {
-					top: 10px;
-					right: 10px;
-				}
 			}
-
-			/* With the way the over panel is created on live, you must specify a height for the iframe.
-			This implementation does not, just use height: 100%;
-			*/
 
 		</style>
 		<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -220,7 +181,6 @@
 
 			<div class="upsellMask"></div>
 			<div class="upsellWrapper">
-				<a class="close" href="#" title="Close"></a>
 				<div class="upsellContainer">
 					<iframe src="iframeContentForOverPanel.html"></iframe>
 				</div>
@@ -231,15 +191,8 @@
 			setTimeout(launchOverPanel, 1000);
 
 			function launchOverPanel() {
-				$('body').addClass('upsellOpen');
+				$('body').addClass('openPanel');
 			}
-
-			$('.close').on('click', function(event){
-				event.preventDefault();
-				$('.upsellMask').remove();
-				$('.upsellWrapper').remove();
-				$('body').removeClass('upsellOpen');
-			})
 		</script>
 	</body>
 </html>
