@@ -19,6 +19,11 @@
 				z-index: 10;
 			}
 
+			.upsellMask {
+				background: #CBD2D6;
+				opacity: 0.7;
+			}
+
 			.upsellWrapper {
 				-webkit-transform: translateY(110%);
 				-moz-transform: translateY(110%);
@@ -28,11 +33,6 @@
 				-moz-transition: -moz-transform 0.3s ease-out;
 				-o-transition: -o-transform 0.3s ease-out;
 				transition: transform 0.3s ease-out;
-			}
-
-			.upsellMask {
-				background: #CBD2D6;
-				opacity: 0.7;
 			}
 
 			.upsellWrapper:before {
@@ -100,6 +100,10 @@
 				-o-transform: translateY(0);
 			}
 
+			.wrapper {
+				background: pink;
+			}
+
 			/* mobile ---- */
 			@media all and (max-width: 767px) {
 				.upsellWrapper:before {
@@ -118,14 +122,53 @@
 	
 	<body>
 		<h1>Over Panel With Scrolling on Mobile</h1>
+		<div class="wrapper">
+			hello
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			hi
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			howdy
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
 
-		<div class="upsellMask"></div>
-		<div class="upsellWrapper">
-			<div class="upsellContainer">
-				<iframe src="iframeContentForOverPanel.html"></iframe>
+
+			<div class="upsellMask"></div>
+			<div class="upsellWrapper">
+				<div class="upsellContainer">
+					<iframe src="iframeContentForOverPanel.html"></iframe>
+				</div>
 			</div>
 		</div>
-
 		<script>
 
 			setTimeout(launchOverPanel, 1000);
