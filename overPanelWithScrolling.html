@@ -109,7 +109,7 @@
 
 			.wrapper {
 				background: pink;
-				max-height: auto;
+				height: auto;
 			}
 
 			.close {
@@ -132,19 +132,24 @@
 					width: 100%;
 				}
 
+				.upsellWrapper:after {
+					background-size: 18px;
+					height: 38px;
+				}
+
 				.upsellContainer {
-					top: 30px;
-					bottom: 0;
+					top: 15px;
+					bottom: 38px;
 					width: 80%;
 				}
 
 				.upsellOpen .wrapper {
-					max-height: 190px;
+					height: 190px;
 					overflow: hidden;
 				}
 
-				.upsellWrapper:after {
-					display: none;
+				iframe {
+					margin-top: 15px;
 				}
 
 				.close {
