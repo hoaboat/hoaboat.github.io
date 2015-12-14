@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Over Panel</title>
+		
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=yes">
+		
+		<style>
+			.upsellMask, .upsellWrapper {
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				z-index: 10;
+			}
+
+			.upsellMask {
+				background: #CBD2D6;
+				opacity: 0.7;
+			}
+
+			.upsellWrapper {
+				background: #fff;
+				width: 620px;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				-ms-box-sizing: border-box;
+				box-sizing: border-box;
+				left: 50%;
+				padding: 90px 120px 0 120px;
+				overflow: auto;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				border-radius: 5px;
+				-webkit-background-clip: padding-box;
+				-moz-background-clip: padding-box;
+				background-clip: padding-box;
+				-webkit-transform: translate(-50%, 100%);
+				-moz-transform: translate(-50%, 100%);
+				-ms-transform: translate(-50%, 100%);
+				-o-transform: translate(-50%, 100%);
+				transform: translate(-50%, 100%);
+				-webkit-transition: -webkit-transform 0.3s ease-out;
+				-moz-transition: -moz-transform 0.3s ease-out;
+				-o-transition: -o-transform 0.3s ease-out;
+				transition: transform 0.3s ease-out;
+			}
+
+			.upsellOpen .upsellWrapper {
+				-webkit-transform: translate(-50%, 0);
+				-moz-transform: translate(-50%, 0);
+				-ms-transform: translate(-50%, 0);
+				-o-transform: translate(-50%, 0);
+				transform: translate(-50%, 0);
+			}
+
+			/* This doesn't allow for the iframe height to be set as a percentage. */
+			.upsellContainer {
+				width: 380px;
+				display: block;
+				min-height: 100%;
+				height: auto !important;
+				height: 100%;
+				margin: 0 auto -50px;
+			}
+
+			.close {
+				position: absolute;
+				top: 15px;
+				right: 20px;
+				width: 19px;
+				height: 19px;
+				padding: 0;
+				background-image: url("https://www.paypalobjects.com/images/checkout/hermes/hermes_window_sprite_v10.png");
+				background-repeat: no-repeat;
+				background-position: -223px 0;
+				background-size: 250px 350px;
+			}
+
+			.main {
+				margin: 0 auto;
+				width: 780px;
+				border: 1px solid #e3e3e3;
+				background: pink;
+			}
+
+			.logo {
+				position: relative;
+				width: 29px;
+				height: 29px;
+				margin: 0 auto;
+				background-position: 0 -47px;
+				background-image: url("https://www.paypalobjects.com/images/checkout/hermes/hermes_window_sprite_v10.png");
+				background-repeat: no-repeat;
+				background-size: 250px 350px;
+			}
+
+			iframe {
+				height: 412px;
+				width: 100%;
+				border: 0;
+			}
+
+			.space {
+				width: 100%;
+				height: 710px;
+			}
+
+			@media all and (max-width: 767px) {
+				.upsellWrapper {
+					width: 100%;
+					padding: 0 15px;
+				}
+
+				.upsellWrapper .upsellContainer {
+					width: auto;
+					margin-top: 30px;
+				}
+
+				.close {
+					right: 15px;
+				}
+			}
+
+
+		</style>
+		<script src="js/jquery-1.11.2.min.js"></script>
+	</head>
+	
+	<body>
+
+		<div class="outerWrapper">
+			<div class="main">
+				<h1>Over Panel</h1>
+
+				<div class="space"></div>
+
+				<div class="upsellMask"></div>
+				<div class="upsellWrapper">
+					<div class="upsellContainer">
+						<a class="close" href="#" title="Close"></a>
+						<iframe src="http://localhost/~hdoan/Source/hoaboat.github.io/iframeContentForOverPanel2.html"></iframe>
+					</div>
+					<div class="logo"></div>
+				</div>
+			</div>
+		</div>
+		<script>
+
+			setTimeout(launchOverPanel, 1000);
+
+			function launchOverPanel() {
+				$('body').addClass('upsellOpen');
+			}
+
+			$('.close').on('click', function(event){
+				event.preventDefault();
+				$('.upsellMask').remove();
+				$('.upsellWrapper').remove();
+				$('body').removeClass('upsellOpen');
+			})
+		</script>
+	</body>
+</html>
