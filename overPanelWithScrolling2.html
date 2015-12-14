@@ -119,12 +119,9 @@
 				overflow: hidden;
 			}
 
-			.main {
-				margin: 0 auto;
-				width: 780px;
-				height: auto;
-				border: 1px solid #e3e3e3;
+			.wrapper {
 				background: pink;
+				height: auto;
 			}
 
 			.close {
@@ -179,7 +176,7 @@
 				To stop the scrolling, just set the page height to something shorter than the window height when the
 				over panel is seen. Then restore the height when the over panel is gone.
 				*/
-				.upsellOpen .main {
+				.upsellOpen .wrapper {
 					height: 190px;
 					overflow: hidden;
 				}
@@ -195,9 +192,18 @@
 	</head>
 	
 	<body>
-		<div class="outerWrapper">
-			<div class="main">
+
 				<h1>Over Panel With Scrolling on Mobile</h1>
+
+				<div class="wrapper">
+					hello
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+					hi
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+					howdy
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+					chow
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 				<div class="space"></div>
 
@@ -210,8 +216,8 @@
 						<iframe src="iframeContentForOverPanel2.html"></iframe>
 					</div>
 				</div>
-			</div>
-		</div>
+					</div>
+
 		<script>
 
 			setTimeout(launchOverPanel, 1000);
