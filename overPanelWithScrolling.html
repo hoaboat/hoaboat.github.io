@@ -173,6 +173,8 @@
 		<h1>Over Panel With Scrolling on Mobile</h1>
 		<div class="wrapper">
 			hello
+			<br/>
+			Input1: <input />
 			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 			hi
 			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
@@ -182,7 +184,7 @@
 			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 			<div class="upsellMask"></div>
-			<div class="upsellWrapper">
+			<div class="upsellWrapper" id="my-dialog">
 				<a class="close" href="#" title="Close"></a>
 				<div class="upsellContainer">
 
@@ -190,20 +192,41 @@
 					<iframe src="iframeContentForOverPanel.html"></iframe>
 				</div>
 			</div>
+			Input2: <input />
 		</div>
 		<script>
+			var dialogOpen;
 
 			setTimeout(launchOverPanel, 1000);
 
 			function launchOverPanel() {
 				$('body').addClass('upsellOpen');
+
+				// This simulates the end of the panel animation
+				setTimeout(setFocusToOverPanel, 750);
 			}
+
+			function setFocusToOverPanel() {
+				var $upsellWrapper = $('#my-dialog');
+				$upsellWrapper.attr('tabindex', '-1');
+				$upsellWrapper.focus();
+				dialogOpen = true;
+			}
+
+			document.addEventListener("focus", function(event) {
+				var dialog = document.getElementById("my-dialog");
+				if (dialogOpen && !dialog.contains(event.target)) {
+					event.stopPropagation();
+					dialog.focus();
+				}
+			}, true);
 
 			$('.close').on('click', function(event){
 				event.preventDefault();
 				$('.upsellMask').remove();
 				$('.upsellWrapper').remove();
 				$('body').removeClass('upsellOpen');
+				dialogOpen = false;
 			})
 		</script>
 	</body>
