@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Transparent iframe content</title>
+		
+		<meta charset="utf-8" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<style>
+			body {
+				font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			}
+
+			h1 {
+				margin-top: 0px;
+			}
+
+			.container {
+				margin: 0 auto;
+				width: 440px;
+				height: 500px;
+				max-height: 600px;
+				padding: 20px;
+				background: white;
+				border-radius: 10px;
+				overflow: scroll;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="container">
+			<h1>iframe content</h1>
+			<p>This is the content for the iframe.</p>
+
+			<p><button>Push me</button></p>
+
+			<p><a href="">Click here to go somewhere</a></p>
+
+			<p>When a DOM event occurs, such as a click on a button, don’t let it change the view itself. Change the model.
+				Changing the DOM without changing a state means you keep your state on the DOM. This rule will keep you from having an inconsistent state.
+				If a click on a “read more” link was made, don’t expand the view, just change the model</p>
+
+			<p>When a view is removed from the DOM using the `remove` method, it must unbind from all the events it is bound to.
+				If you’ve used `on` for binding, it’s your duty to use `off` for unbinding. Without unbinding, the garbage collector can’t release the memory for you and your apps performance will degrade.
+				That’s where `listenTo` comes in. It tracks what the view is bound to and unbinds it on a remove. Backbone does this by calling `stopListening` just before removing itself from the DOM:
+				</p>
+
+			<p>Such as a click on a button, don’t let it change the view itself. Change the model.
+				Changing the DOM without changing a state means you keep your state on the DOM. This rule will keep you from having an inconsistent state.
+				If a click on a “read more” link was m</p>
+
+		</div>
+
+	</body>
+</html>
