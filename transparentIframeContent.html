@@ -18,12 +18,16 @@
 			.container {
 				margin: 0 auto;
 				width: 440px;
-				height: 500px;
-				max-height: 600px;
+				min-height: 400px;
+				max-height: 540px;
 				padding: 20px;
 				background: white;
 				border-radius: 10px;
-				overflow: scroll;
+				overflow: auto;
+			}
+
+			.last {
+				margin-bottom: 0;
 			}
 		</style>
 	</head>
@@ -46,9 +50,9 @@
 				That’s where `listenTo` comes in. It tracks what the view is bound to and unbinds it on a remove. Backbone does this by calling `stopListening` just before removing itself from the DOM:
 				</p>
 
-			<p>Such as a click on a button, don’t let it change the view itself. Change the model.
+			<p class="last">Such as a click on a button, don’t let it change the view itself. Change model.
 				Changing the DOM without changing a state means you keep your state on the DOM. This rule will keep you from having an inconsistent state.
-				If a click on a “read more” link was m</p>
+			</p>
 
 		</div>
 
